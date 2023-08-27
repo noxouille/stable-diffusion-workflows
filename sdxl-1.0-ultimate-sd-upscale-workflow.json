@@ -1,0 +1,811 @@
+{
+  "last_node_id": 13,
+  "last_link_id": 21,
+  "nodes": [
+    {
+      "id": 2,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        46,
+        572
+      ],
+      "size": {
+        "0": 315,
+        "1": 98
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            6
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            1,
+            2
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            5
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "sd_xl_base_1.0.safetensors"
+      ]
+    },
+    {
+      "id": 1,
+      "type": "LoadImage",
+      "pos": [
+        47,
+        103
+      ],
+      "size": [
+        311.1294363097042,
+        412.11676555436605
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            7,
+            8
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "ReVision_00001_.png",
+        "image"
+      ]
+    },
+    {
+      "id": 12,
+      "type": "UpscaleModelLoader",
+      "pos": [
+        44,
+        726
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            17
+          ],
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UpscaleModelLoader"
+      },
+      "widgets_values": [
+        "4x_NMKD-Siax_200k.pth"
+      ]
+    },
+    {
+      "id": 3,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1308,
+        432
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 1
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            3
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 4,
+      "type": "CLIPTextEncode",
+      "pos": [
+        1303,
+        503
+      ],
+      "size": {
+        "0": 400,
+        "1": 200
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            4
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 7,
+      "type": "CM_NearestSDXLResolution",
+      "pos": [
+        534,
+        277
+      ],
+      "size": {
+        "0": 210,
+        "1": 46
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 8
+        }
+      ],
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            16
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            15
+          ],
+          "shape": 3,
+          "slot_index": 1
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CM_NearestSDXLResolution"
+      }
+    },
+    {
+      "id": 8,
+      "type": "CM_IntBinaryOperation",
+      "pos": [
+        920,
+        727
+      ],
+      "size": [
+        315,
+        106
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT",
+          "link": 16,
+          "widget": {
+            "name": "a",
+            "config": [
+              "INT",
+              {
+                "default": 0
+              }
+            ]
+          },
+          "slot_index": 0
+        },
+        {
+          "name": "b",
+          "type": "INT",
+          "link": 13,
+          "widget": {
+            "name": "b",
+            "config": [
+              "INT",
+              {
+                "default": 0
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            19
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Multiply Width",
+      "properties": {
+        "Node name for S&R": "CM_IntBinaryOperation"
+      },
+      "widgets_values": [
+        "Mul",
+        4,
+        4
+      ]
+    },
+    {
+      "id": 11,
+      "type": "CM_IntBinaryOperation",
+      "pos": [
+        915,
+        796
+      ],
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT",
+          "link": 15,
+          "widget": {
+            "name": "a",
+            "config": [
+              "INT",
+              {
+                "default": 0
+              }
+            ]
+          },
+          "slot_index": 0
+        },
+        {
+          "name": "b",
+          "type": "INT",
+          "link": 14,
+          "widget": {
+            "name": "b",
+            "config": [
+              "INT",
+              {
+                "default": 0
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            20
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "Multiply Height",
+      "properties": {
+        "Node name for S&R": "CM_IntBinaryOperation"
+      },
+      "widgets_values": [
+        "Mul",
+        4,
+        4
+      ]
+    },
+    {
+      "id": 6,
+      "type": "RecommendedResCalc",
+      "pos": [
+        1302,
+        686
+      ],
+      "size": [
+        315,
+        162
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "desiredXSIZE",
+          "type": "INT",
+          "link": 19,
+          "widget": {
+            "name": "desiredXSIZE",
+            "config": [
+              "INT",
+              {
+                "default": 1024,
+                "min": 0,
+                "max": 8192,
+                "step": 2
+              }
+            ]
+          },
+          "label": "Desired Width"
+        },
+        {
+          "name": "desiredYSIZE",
+          "type": "INT",
+          "link": 20,
+          "widget": {
+            "name": "desiredYSIZE",
+            "config": [
+              "INT",
+              {
+                "default": 1024,
+                "min": 0,
+                "max": 8192,
+                "step": 2
+              }
+            ]
+          },
+          "label": "Desired Height"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "recomm width",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "recomm height",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "upscale factor",
+          "type": "FLOAT",
+          "links": [
+            18
+          ],
+          "shape": 3,
+          "slot_index": 2
+        },
+        {
+          "name": "reverse upscale for 4x",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "reverse upscale for 2x",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RecommendedResCalc"
+      },
+      "widgets_values": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "id": 5,
+      "type": "UltimateSDUpscale",
+      "pos": [
+        1746,
+        126
+      ],
+      "size": [
+        315,
+        590
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "link": 7
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 6
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 3
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 4
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 5
+        },
+        {
+          "name": "upscale_model",
+          "type": "UPSCALE_MODEL",
+          "link": 17,
+          "slot_index": 5
+        },
+        {
+          "name": "upscale_by",
+          "type": "FLOAT",
+          "link": 18,
+          "widget": {
+            "name": "upscale_by",
+            "config": [
+              "FLOAT",
+              {
+                "default": 2,
+                "min": 0.05,
+                "max": 4,
+                "step": 0.05
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            21
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UltimateSDUpscale"
+      },
+      "widgets_values": [
+        2,
+        104035819330167,
+        "randomize",
+        30,
+        8,
+        "dpmpp_3m_sde_gpu",
+        "normal",
+        0.25,
+        "Linear",
+        1024,
+        1024,
+        8,
+        32,
+        "None",
+        1,
+        64,
+        8,
+        16,
+        "enable"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "PrimitiveNode",
+      "pos": [
+        103,
+        832
+      ],
+      "size": [
+        252.1866123832703,
+        82
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            13,
+            14
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "a",
+            "config": [
+              "INT",
+              {
+                "default": 0
+              }
+            ]
+          },
+          "label": "Scale Factor"
+        }
+      ],
+      "title": "Set Scale Factor",
+      "properties": {},
+      "widgets_values": [
+        4,
+        "fixed"
+      ]
+    },
+    {
+      "id": 13,
+      "type": "SaveImage",
+      "pos": [
+        2110,
+        125
+      ],
+      "size": [
+        688.6500340613475,
+        732.5114136117555
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 21
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "UltimateSDXLUpscale"
+      ]
+    }
+  ],
+  "links": [
+    [
+      1,
+      2,
+      1,
+      3,
+      0,
+      "CLIP"
+    ],
+    [
+      2,
+      2,
+      1,
+      4,
+      0,
+      "CLIP"
+    ],
+    [
+      3,
+      3,
+      0,
+      5,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      4,
+      4,
+      0,
+      5,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      5,
+      2,
+      2,
+      5,
+      4,
+      "VAE"
+    ],
+    [
+      6,
+      2,
+      0,
+      5,
+      1,
+      "MODEL"
+    ],
+    [
+      7,
+      1,
+      0,
+      5,
+      0,
+      "IMAGE"
+    ],
+    [
+      8,
+      1,
+      0,
+      7,
+      0,
+      "IMAGE"
+    ],
+    [
+      13,
+      10,
+      0,
+      8,
+      1,
+      "INT"
+    ],
+    [
+      14,
+      10,
+      0,
+      11,
+      1,
+      "INT"
+    ],
+    [
+      15,
+      7,
+      1,
+      11,
+      0,
+      "INT"
+    ],
+    [
+      16,
+      7,
+      0,
+      8,
+      0,
+      "INT"
+    ],
+    [
+      17,
+      12,
+      0,
+      5,
+      5,
+      "UPSCALE_MODEL"
+    ],
+    [
+      18,
+      6,
+      2,
+      5,
+      6,
+      "FLOAT"
+    ],
+    [
+      19,
+      8,
+      0,
+      6,
+      0,
+      "INT"
+    ],
+    [
+      20,
+      11,
+      0,
+      6,
+      1,
+      "INT"
+    ],
+    [
+      21,
+      5,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "Ultimate SDXL Upscale",
+      "bounding": [
+        0,
+        0,
+        2928,
+        932
+      ],
+      "color": "#3f789e"
+    }
+  ],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}
