@@ -8,4 +8,4 @@ I provided notebooks for both Paperspace and Google Colab, simply click the link
 
 ## Dockerfile
 
-The docker image to run ComfyUI os josted on Docker Hub: [noxouille/comfyui-stable-diffusion](https://hub.docker.com/r/noxouille/comfyui-stable-diffusion)
+The docker image to run ComfyUI is hosted on Docker Hub: [noxouille/comfyui-stable-diffusion](https://hub.docker.com/r/noxouille/comfyui-stable-diffusion)
