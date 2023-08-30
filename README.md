@@ -15,7 +15,7 @@ I prefer modular workflow because it's way easier to visualize, reroute the flow
 I find it counterproductive when a workflow is arranged as a monolith of control panel interface.
 
 ComfyUI is a great interface to do exactly that, with only drag-and-drop modules instead of coding the custom python functions yourself, which speeds things up a lot!
-It seems to be more efficient performance-wise as well, as ComfyUI only process the nodes that you use.
+It seems to be more efficient performance-wise as well, as ComfyUI only loads and process the nodes that you use.
 The extensions I used also provide better optimization and quality of life.
 
 Each of the workflows here are aimed at a single objective to facilitate that.
