@@ -1,0 +1,1100 @@
+{
+  "last_node_id": 121,
+  "last_link_id": 268,
+  "nodes": [
+    {
+      "id": 48,
+      "type": "XY Input: Checkpoint",
+      "pos": [
+        450.05635078183946,
+        -570
+      ],
+      "size": {
+        "0": 315,
+        "1": 274
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "X or Y",
+          "type": "XY",
+          "links": [
+            100
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "XY Input: Checkpoint"
+      },
+      "widgets_values": [
+        "meichidarkMix_meichidarkV45.safetensors",
+        -2,
+        "perfectdeliberate_v10.safetensors",
+        -2,
+        "None",
+        -1,
+        "None",
+        -1,
+        "None",
+        -1
+      ]
+    },
+    {
+      "id": 51,
+      "type": "XY Input: Seeds++ Batch",
+      "pos": [
+        460.05635078183946,
+        -750
+      ],
+      "size": {
+        "0": 315,
+        "1": 58
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "X or Y",
+          "type": "XY",
+          "links": [
+            101
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "XY Input: Seeds++ Batch"
+      },
+      "widgets_values": [
+        3
+      ]
+    },
+    {
+      "id": 56,
+      "type": "PrimitiveNode",
+      "pos": [
+        -199,
+        -145
+      ],
+      "size": {
+        "0": 394.4673767089844,
+        "1": 146.46144104003906
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            111,
+            113
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "negative",
+            "config": [
+              "STRING",
+              {
+                "default": "Negative",
+                "multiline": true
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Initial Negative Prompt",
+      "properties": {},
+      "widgets_values": [
+        "FastNegativeV2, easynegative, BadDream, UnrealisticDream"
+      ],
+      "color": "#322",
+      "bgcolor": "#533"
+    },
+    {
+      "id": 55,
+      "type": "PrimitiveNode",
+      "pos": [
+        -192,
+        -414
+      ],
+      "size": {
+        "0": 383.27899169921875,
+        "1": 193.15322875976562
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            110,
+            141
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "positive",
+            "config": [
+              "STRING",
+              {
+                "default": "Positive",
+                "multiline": true
+              }
+            ]
+          }
+        }
+      ],
+      "title": "initial Positive Prompt",
+      "properties": {},
+      "widgets_values": [
+        ""
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 30,
+      "type": "PrimitiveNode",
+      "pos": [
+        905.341797221452,
+        217.1345484768443
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            89
+          ],
+          "slot_index": 0,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "title": "Generation Seed",
+      "properties": {},
+      "widgets_values": [
+        180888981589945,
+        "fixed"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 46,
+      "type": "Efficient Loader",
+      "pos": [
+        396.2842337928026,
+        12.40888283511488
+      ],
+      "size": {
+        "0": 402.0350036621094,
+        "1": 761.3251953125
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora_stack",
+          "type": "LORA_STACK",
+          "link": null
+        },
+        {
+          "name": "cnet_stack",
+          "type": "CONTROL_NET_STACK",
+          "link": null
+        },
+        {
+          "name": "positive",
+          "type": "STRING",
+          "link": 110,
+          "widget": {
+            "name": "positive",
+            "config": [
+              "STRING",
+              {
+                "default": "Positive",
+                "multiline": true
+              }
+            ]
+          }
+        },
+        {
+          "name": "negative",
+          "type": "STRING",
+          "link": 111,
+          "widget": {
+            "name": "negative",
+            "config": [
+              "STRING",
+              {
+                "default": "Negative",
+                "multiline": true
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            114
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CONDITIONING+",
+          "type": "CONDITIONING",
+          "links": [
+            84
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "CONDITIONING-",
+          "type": "CONDITIONING",
+          "links": [
+            85
+          ],
+          "shape": 3,
+          "slot_index": 2
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            88
+          ],
+          "shape": 3,
+          "slot_index": 3
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            83
+          ],
+          "shape": 3,
+          "slot_index": 4
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            82
+          ],
+          "shape": 3,
+          "slot_index": 5
+        },
+        {
+          "name": "DEPENDENCIES",
+          "type": "DEPENDENCIES",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Efficient Loader"
+      },
+      "widgets_values": [
+        "meichidarkMix_meichidarkV45.safetensors",
+        "orangemix.vae.pt",
+        -2,
+        "None",
+        0.6,
+        1,
+        "(((masterpiece))), ((best quality)), ((intricate detailed)), ((Hyperrealistic)), absurd res, ((MILF)), 1girl, rias gremory, highly detailed, illustration, 1girl, (medium breasts), ((D cup tits:1.4)), perfect hands, detailed fingers, beautiful detailed eyes, long hair, black hair, brown eyes, classroom, (open blouse:1.2), ( school brazer:1.2), (white shirt:1.2), (mini tight skirt:1.2), cleavage, tights, glasses, detailed background, perfect eyes, seductive eyes, seductive smile, seductive pose, looking at the viewer, sexy poses, from front",
+        "FastNegativeV2, easynegative, BadDream, UnrealisticDream",
+        768,
+        768,
+        1
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 52,
+      "type": "Efficient Loader",
+      "pos": [
+        420.05635078183946,
+        -1290
+      ],
+      "size": {
+        "0": 394.72320556640625,
+        "1": 421.1684875488281
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "lora_stack",
+          "type": "LORA_STACK",
+          "link": null
+        },
+        {
+          "name": "cnet_stack",
+          "type": "CONTROL_NET_STACK",
+          "link": null
+        },
+        {
+          "name": "positive",
+          "type": "STRING",
+          "link": 141,
+          "widget": {
+            "name": "positive",
+            "config": [
+              "STRING",
+              {
+                "default": "Positive",
+                "multiline": true
+              }
+            ]
+          }
+        },
+        {
+          "name": "negative",
+          "type": "STRING",
+          "link": 113,
+          "widget": {
+            "name": "negative",
+            "config": [
+              "STRING",
+              {
+                "default": "Negative",
+                "multiline": true
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "CONDITIONING+",
+          "type": "CONDITIONING",
+          "links": [
+            105
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "CONDITIONING-",
+          "type": "CONDITIONING",
+          "links": [
+            106
+          ],
+          "shape": 3,
+          "slot_index": 2
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            107
+          ],
+          "shape": 3,
+          "slot_index": 3
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            108
+          ],
+          "shape": 3,
+          "slot_index": 4
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "DEPENDENCIES",
+          "type": "DEPENDENCIES",
+          "links": [
+            102
+          ],
+          "shape": 3,
+          "slot_index": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Efficient Loader"
+      },
+      "widgets_values": [
+        "meichidarkMix_meichidarkV45.safetensors",
+        "orangemix.vae.pt",
+        -2,
+        "None",
+        1,
+        1,
+        "(((masterpiece))), ((best quality)), ((intricate detailed)), ((Hyperrealistic)), absurd res, ((MILF)), 1girl, rias gremory, highly detailed, illustration, 1girl, (medium breasts), ((D cup tits:1.4)), perfect hands, detailed fingers, beautiful detailed eyes, long hair, black hair, brown eyes, classroom, (open blouse:1.2), ( school brazer:1.2), (white shirt:1.2), (mini tight skirt:1.2), cleavage, tights, glasses, detailed background, perfect eyes, seductive eyes, seductive smile, seductive pose, looking at the viewer, sexy poses, from front",
+        "FastNegativeV2, easynegative, BadDream, UnrealisticDream",
+        768,
+        768,
+        1
+      ]
+    },
+    {
+      "id": 2,
+      "type": "ToBasicPipe",
+      "pos": [
+        942.341797221452,
+        14.134548476844273
+      ],
+      "size": {
+        "0": 161.1999969482422,
+        "1": 106
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 114
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 82
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 83
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 84
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 85
+        }
+      ],
+      "outputs": [
+        {
+          "name": "basic_pipe",
+          "type": "BASIC_PIPE",
+          "links": [
+            87
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ToBasicPipe"
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 49,
+      "type": "XY Plot",
+      "pos": [
+        970.0563507818396,
+        -840
+      ],
+      "size": {
+        "0": 315,
+        "1": 194
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "dependencies",
+          "type": "DEPENDENCIES",
+          "link": 102
+        },
+        {
+          "name": "X",
+          "type": "XY",
+          "link": 101
+        },
+        {
+          "name": "Y",
+          "type": "XY",
+          "link": 100,
+          "slot_index": 2
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SCRIPT",
+          "type": "SCRIPT",
+          "links": [
+            103
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "XY Plot"
+      },
+      "widgets_values": [
+        0,
+        "False",
+        "Vertical",
+        "True",
+        "Images"
+      ]
+    },
+    {
+      "id": 47,
+      "type": "ImpactKSamplerAdvancedBasicPipe",
+      "pos": [
+        1245.341797221453,
+        23.134548476844394
+      ],
+      "size": {
+        "0": 315,
+        "1": 478
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "basic_pipe",
+          "type": "BASIC_PIPE",
+          "link": 87
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 88
+        },
+        {
+          "name": "noise_seed",
+          "type": "INT",
+          "link": 89,
+          "widget": {
+            "name": "noise_seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "BASIC_PIPE",
+          "type": "BASIC_PIPE",
+          "links": [],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            91
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            92
+          ],
+          "shape": 3,
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImpactKSamplerAdvancedBasicPipe"
+      },
+      "widgets_values": [
+        true,
+        631249121840568,
+        "randomize",
+        35,
+        9,
+        "dpmpp_3m_sde_gpu",
+        "karras",
+        0,
+        10000,
+        true
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 53,
+      "type": "KSampler (Efficient)",
+      "pos": [
+        1380.0563507818392,
+        -1290
+      ],
+      "size": {
+        "0": 362.439453125,
+        "1": 680.6658935546875
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": null
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 105
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 106
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 107
+        },
+        {
+          "name": "optional_vae",
+          "type": "VAE",
+          "link": 108
+        },
+        {
+          "name": "script",
+          "type": "SCRIPT",
+          "link": 103
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "CONDITIONING+",
+          "type": "CONDITIONING",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "CONDITIONING-",
+          "type": "CONDITIONING",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            109
+          ],
+          "shape": 3,
+          "slot_index": 5
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler (Efficient)"
+      },
+      "widgets_values": [
+        "Script",
+        403459518464077,
+        "randomize",
+        20,
+        7,
+        "dpmpp_sde_gpu",
+        "karras",
+        1,
+        "auto",
+        "true"
+      ]
+    },
+    {
+      "id": 7,
+      "type": "VAEDecode",
+      "pos": [
+        1652.341797221453,
+        37.134548476844316
+      ],
+      "size": {
+        "0": 140,
+        "1": 46
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 91
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 92
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            60
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 54,
+      "type": "SaveImage",
+      "pos": [
+        1820,
+        -1320
+      ],
+      "size": {
+        "0": 826.8399658203125,
+        "1": 850.7303466796875
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 109
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "PlotXY"
+      ]
+    },
+    {
+      "id": 10,
+      "type": "PreviewImage",
+      "pos": [
+        1917.341797221453,
+        18.134548476844387
+      ],
+      "size": {
+        "0": 734.3956909179688,
+        "1": 866.6655883789062
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 60
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "PreviewImage"
+      },
+      "color": "#223",
+      "bgcolor": "#335"
+    }
+  ],
+  "links": [
+    [
+      60,
+      7,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      82,
+      46,
+      5,
+      2,
+      1,
+      "CLIP"
+    ],
+    [
+      83,
+      46,
+      4,
+      2,
+      2,
+      "VAE"
+    ],
+    [
+      84,
+      46,
+      1,
+      2,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      85,
+      46,
+      2,
+      2,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      87,
+      2,
+      0,
+      47,
+      0,
+      "BASIC_PIPE"
+    ],
+    [
+      88,
+      46,
+      3,
+      47,
+      1,
+      "LATENT"
+    ],
+    [
+      89,
+      30,
+      0,
+      47,
+      2,
+      "INT"
+    ],
+    [
+      91,
+      47,
+      1,
+      7,
+      0,
+      "LATENT"
+    ],
+    [
+      92,
+      47,
+      2,
+      7,
+      1,
+      "VAE"
+    ],
+    [
+      100,
+      48,
+      0,
+      49,
+      2,
+      "XY"
+    ],
+    [
+      101,
+      51,
+      0,
+      49,
+      1,
+      "XY"
+    ],
+    [
+      102,
+      52,
+      6,
+      49,
+      0,
+      "DEPENDENCIES"
+    ],
+    [
+      103,
+      49,
+      0,
+      53,
+      5,
+      "SCRIPT"
+    ],
+    [
+      105,
+      52,
+      1,
+      53,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      106,
+      52,
+      2,
+      53,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      107,
+      52,
+      3,
+      53,
+      3,
+      "LATENT"
+    ],
+    [
+      108,
+      52,
+      4,
+      53,
+      4,
+      "VAE"
+    ],
+    [
+      109,
+      53,
+      5,
+      54,
+      0,
+      "IMAGE"
+    ],
+    [
+      110,
+      55,
+      0,
+      46,
+      2,
+      "STRING"
+    ],
+    [
+      111,
+      56,
+      0,
+      46,
+      3,
+      "STRING"
+    ],
+    [
+      113,
+      56,
+      0,
+      52,
+      3,
+      "STRING"
+    ],
+    [
+      114,
+      46,
+      0,
+      2,
+      0,
+      "MODEL"
+    ],
+    [
+      141,
+      55,
+      0,
+      52,
+      2,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "ImageGeneration",
+      "bounding": [
+        337,
+        -91,
+        2374,
+        997
+      ],
+      "color": "#88A"
+    },
+    {
+      "title": "PlotXY",
+      "bounding": [
+        325,
+        -1436,
+        2382,
+        1281
+      ],
+      "color": "#A88"
+    }
+  ],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}
