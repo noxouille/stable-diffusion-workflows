@@ -24,3 +24,9 @@ Each of the workflows here are aimed at a single objective to facilitate that.
 
 The docker image to run ComfyUI is hosted on Docker Hub: [noxouille/comfyui-stable-diffusion](https://hub.docker.com/r/noxouille/comfyui-stable-diffusion)
 
+## Noise
+
+The different noise in the Noise folder is a reupload of attachment files of [this mindblowing 4 parts-blog of Mitsuki Nozomi](https://note.com/mitsukinozomi/n/n3b9fb82f2ed6).
+Full credit goes to the blog author.
+After reading the blog, I always incorporate additive noises to enhance details and color transfer.
+Sometimes I replace the details noise with PPF noise to see if I get interesting results.
