@@ -1,0 +1,1553 @@
+{
+  "last_node_id": 36,
+  "last_link_id": 45,
+  "nodes": [
+    {
+      "id": 10,
+      "type": "ComponentInput",
+      "pos": [
+        -3020,
+        -250
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "ckpt_name",
+          "type": "animerge_v21.safetensors,aniverse_thxEd14Pruned.safetensors,darkSushi25D25D_v40.safetensors,helloyoung2d_V10h.safetensors,meinapastel_v6Pastel.safetensors,plumpbreastsmix_v11.safetensors",
+          "links": [
+            6
+          ],
+          "slot_index": 0,
+          "label": "ckpt_name"
+        }
+      ],
+      "title": "01.Component Input",
+      "properties": {}
+    },
+    {
+      "id": 6,
+      "type": "ComponentInputOptional",
+      "pos": [
+        -3030,
+        -600
+      ],
+      "size": {
+        "0": 201.60000610351562,
+        "1": 26
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "b1",
+          "type": "FLOAT",
+          "links": [
+            14
+          ],
+          "slot_index": 0,
+          "label": "freeu_b1"
+        }
+      ],
+      "title": "04.Component Input (OPT)",
+      "properties": {}
+    },
+    {
+      "id": 8,
+      "type": "ComponentInputOptional",
+      "pos": [
+        -3010,
+        -450
+      ],
+      "size": {
+        "0": 201.60000610351562,
+        "1": 26
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "s1",
+          "type": "FLOAT",
+          "links": [
+            16
+          ],
+          "slot_index": 0,
+          "label": "freeu_s1"
+        }
+      ],
+      "title": "06.Component Input (OPT)",
+      "properties": {}
+    },
+    {
+      "id": 9,
+      "type": "ComponentInputOptional",
+      "pos": [
+        -3010,
+        -360
+      ],
+      "size": {
+        "0": 201.60000610351562,
+        "1": 26
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "s2",
+          "type": "FLOAT",
+          "links": [
+            17
+          ],
+          "slot_index": 0,
+          "label": "freeu_s2"
+        }
+      ],
+      "title": "07.Component Input (OPT)",
+      "properties": {}
+    },
+    {
+      "id": 7,
+      "type": "ComponentInputOptional",
+      "pos": [
+        -3020,
+        -530
+      ],
+      "size": {
+        "0": 201.60000610351562,
+        "1": 26
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "b2",
+          "type": "FLOAT",
+          "links": [
+            15
+          ],
+          "slot_index": 0,
+          "label": "freeu_b2"
+        }
+      ],
+      "title": "05.Component Input (OPT)",
+      "properties": {}
+    },
+    {
+      "id": 25,
+      "type": "ComponentInputOptional",
+      "pos": [
+        -3000,
+        -130
+      ],
+      "size": {
+        "0": 201.60000610351562,
+        "1": 26
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "stop_at_clip_layer",
+          "type": "INT",
+          "links": [
+            25
+          ],
+          "slot_index": 0,
+          "label": "stop_at_clip_layer"
+        }
+      ],
+      "title": "08.Component Input (OPT)",
+      "properties": {}
+    },
+    {
+      "id": 16,
+      "type": "ComponentInputOptional",
+      "pos": [
+        -2990,
+        180
+      ],
+      "size": {
+        "0": 201.60000610351562,
+        "1": 26
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "model_name",
+          "type": "4x-AnimeSharp.pth,4x-UltraSharp.pth,4x_NMKD-Siax_200k.pth,4x_NMKD-Superscale-SP_178000_G.pth,RealESRGAN_x4plus_anime_6B.pth,realesr-general-x4v3.pth",
+          "links": [
+            18
+          ],
+          "slot_index": 0,
+          "label": "upscale_model"
+        }
+      ],
+      "title": "03.Component Input (OPT)",
+      "properties": {}
+    },
+    {
+      "id": 20,
+      "type": "ComponentInputOptional",
+      "pos": [
+        -2990,
+        20
+      ],
+      "size": {
+        "0": 201.60000610351562,
+        "1": 26
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "vae_name",
+          "type": "kl-f8-anime2.ckpt,orangemix.vae.pt,vae-ft-mse-840000-ema-pruned.safetensors",
+          "links": [
+            20
+          ],
+          "slot_index": 0,
+          "label": "vae_name"
+        }
+      ],
+      "title": "02.Component Input (OPT)",
+      "properties": {}
+    },
+    {
+      "id": 1,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -2740,
+        -250
+      ],
+      "size": {
+        "0": 320,
+        "1": 100
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "ckpt_name",
+          "type": "animerge_v21.safetensors,aniverse_thxEd14Pruned.safetensors,darkSushi25D25D_v40.safetensors,helloyoung2d_V10h.safetensors,meinapastel_v6Pastel.safetensors,plumpbreastsmix_v11.safetensors",
+          "link": 6,
+          "widget": {
+            "name": "ckpt_name",
+            "config": [
+              [
+                "animerge_v21.safetensors",
+                "aniverse_thxEd14Pruned.safetensors",
+                "darkSushi25D25D_v40.safetensors",
+                "helloyoung2d_V10h.safetensors",
+                "meinapastel_v6Pastel.safetensors",
+                "plumpbreastsmix_v11.safetensors"
+              ]
+            ]
+          },
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            1,
+            29
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "color": "#B39DDB"
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            22
+          ],
+          "shape": 3,
+          "slot_index": 1,
+          "color": "#FFD500"
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            32,
+            33
+          ],
+          "shape": 3,
+          "slot_index": 2,
+          "color": "#FF6E6E"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "animerge_v21.safetensors"
+      ]
+    },
+    {
+      "id": 14,
+      "type": "UpscaleModelLoader",
+      "pos": [
+        -2700,
+        150
+      ],
+      "size": {
+        "0": 320,
+        "1": 60
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model_name",
+          "type": "4x-AnimeSharp.pth,4x-UltraSharp.pth,4x_NMKD-Siax_200k.pth,4x_NMKD-Superscale-SP_178000_G.pth,RealESRGAN_x4plus_anime_6B.pth,realesr-general-x4v3.pth",
+          "link": 18,
+          "widget": {
+            "name": "model_name",
+            "config": [
+              [
+                "4x-AnimeSharp.pth",
+                "4x-UltraSharp.pth",
+                "4x_NMKD-Siax_200k.pth",
+                "4x_NMKD-Superscale-SP_178000_G.pth",
+                "RealESRGAN_x4plus_anime_6B.pth",
+                "realesr-general-x4v3.pth"
+              ]
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            19
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "color": ""
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UpscaleModelLoader"
+      },
+      "widgets_values": [
+        "4x-AnimeSharp.pth"
+      ]
+    },
+    {
+      "id": 18,
+      "type": "VAELoader",
+      "pos": [
+        -2700,
+        10
+      ],
+      "size": {
+        "0": 320,
+        "1": 60
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "vae_name",
+          "type": "kl-f8-anime2.ckpt,orangemix.vae.pt,vae-ft-mse-840000-ema-pruned.safetensors",
+          "link": 20,
+          "widget": {
+            "name": "vae_name",
+            "config": [
+              [
+                "kl-f8-anime2.ckpt",
+                "orangemix.vae.pt",
+                "vae-ft-mse-840000-ema-pruned.safetensors"
+              ]
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            21,
+            41,
+            43
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "color": "#FF6E6E"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "kl-f8-anime2.ckpt"
+      ]
+    },
+    {
+      "id": 2,
+      "type": "FreeU",
+      "pos": [
+        -2280,
+        -430
+      ],
+      "size": {
+        "0": 210,
+        "1": 114
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 1
+        },
+        {
+          "name": "b1",
+          "type": "FLOAT",
+          "link": 14,
+          "widget": {
+            "name": "b1",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1.1,
+                "min": 0,
+                "max": 10,
+                "step": 0.01
+              }
+            ]
+          }
+        },
+        {
+          "name": "b2",
+          "type": "FLOAT",
+          "link": 15,
+          "widget": {
+            "name": "b2",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1.2,
+                "min": 0,
+                "max": 10,
+                "step": 0.01
+              }
+            ]
+          }
+        },
+        {
+          "name": "s1",
+          "type": "FLOAT",
+          "link": 16,
+          "widget": {
+            "name": "s1",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0.9,
+                "min": 0,
+                "max": 10,
+                "step": 0.01
+              }
+            ]
+          }
+        },
+        {
+          "name": "s2",
+          "type": "FLOAT",
+          "link": 17,
+          "widget": {
+            "name": "s2",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0.2,
+                "min": 0,
+                "max": 10,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            28
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "color": "#B39DDB"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FreeU"
+      },
+      "widgets_values": [
+        1.4000000000000001,
+        1,
+        1.3,
+        0.5
+      ]
+    },
+    {
+      "id": 22,
+      "type": "CLIPSetLastLayer",
+      "pos": [
+        -2290,
+        -110
+      ],
+      "size": {
+        "0": 210,
+        "1": 60
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 22
+        },
+        {
+          "name": "stop_at_clip_layer",
+          "type": "INT",
+          "link": 25,
+          "widget": {
+            "name": "stop_at_clip_layer",
+            "config": [
+              "INT",
+              {
+                "default": -1,
+                "min": -24,
+                "max": -1,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            30,
+            31,
+            34,
+            37
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "color": "#FFD500"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPSetLastLayer"
+      },
+      "widgets_values": [
+        -2
+      ]
+    },
+    {
+      "id": 31,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -2030,
+        -270
+      ],
+      "size": {
+        "0": 210,
+        "1": 76
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 34
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            35,
+            36
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 32,
+      "type": "CLIPTextEncode",
+      "pos": [
+        -2030,
+        -130
+      ],
+      "size": {
+        "0": 210,
+        "1": 76
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 37
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            38,
+            39
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 30,
+      "type": "ToBasicPipe",
+      "pos": [
+        -1720,
+        -180
+      ],
+      "size": {
+        "0": 241.79998779296875,
+        "1": 106
+      },
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 29
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 31
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 33
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 36
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 38
+        }
+      ],
+      "outputs": [
+        {
+          "name": "basic_pipe",
+          "type": "BASIC_PIPE",
+          "links": [
+            27,
+            44
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "color": ""
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ToBasicPipe"
+      }
+    },
+    {
+      "id": 28,
+      "type": "ToBasicPipe",
+      "pos": [
+        -1790,
+        -400
+      ],
+      "size": {
+        "0": 241.79998779296875,
+        "1": 106
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 28
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 30
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 32
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 35
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 39
+        }
+      ],
+      "outputs": [
+        {
+          "name": "basic_pipe",
+          "type": "BASIC_PIPE",
+          "links": [
+            26,
+            40
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "color": ""
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ToBasicPipe"
+      }
+    },
+    {
+      "id": 29,
+      "type": "ComponentOutput",
+      "pos": [
+        -1320,
+        -230
+      ],
+      "size": {
+        "0": 194.8000030517578,
+        "1": 26
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "BASIC_PIPE",
+          "type": "BASIC_PIPE",
+          "link": 27,
+          "label": "BASIC_PIPE + BAKED_VAE"
+        }
+      ],
+      "title": "03.Component Output",
+      "properties": {}
+    },
+    {
+      "id": 36,
+      "type": "EditBasicPipe",
+      "pos": [
+        -1330,
+        -110
+      ],
+      "size": {
+        "0": 180,
+        "1": 130
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "basic_pipe",
+          "type": "BASIC_PIPE",
+          "link": 44
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": null
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 43
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "basic_pipe",
+          "type": "BASIC_PIPE",
+          "links": [
+            45
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "color": ""
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EditBasicPipe"
+      }
+    },
+    {
+      "id": 27,
+      "type": "ComponentOutput",
+      "pos": [
+        -1380,
+        -400
+      ],
+      "size": {
+        "0": 245.1999969482422,
+        "1": 26
+      },
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "BASIC_PIPE",
+          "type": "BASIC_PIPE",
+          "link": 26,
+          "label": "BASIC_PIPE_FREEU + BAKED_VAE"
+        }
+      ],
+      "title": "01.Component Output",
+      "properties": {}
+    },
+    {
+      "id": 35,
+      "type": "EditBasicPipe",
+      "pos": [
+        -1490,
+        -300
+      ],
+      "size": {
+        "0": 267,
+        "1": 126
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "basic_pipe",
+          "type": "BASIC_PIPE",
+          "link": 40
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": null
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 41
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "basic_pipe",
+          "type": "BASIC_PIPE",
+          "links": [
+            42
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "color": ""
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EditBasicPipe"
+      }
+    },
+    {
+      "id": 33,
+      "type": "ComponentOutput",
+      "pos": [
+        -1290,
+        -330
+      ],
+      "size": {
+        "0": 194.8000030517578,
+        "1": 26
+      },
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "BASIC_PIPE",
+          "type": "BASIC_PIPE",
+          "link": 42,
+          "label": "BASIC_PIPE_FREEU + VAE"
+        }
+      ],
+      "title": "02.Component Output",
+      "properties": {}
+    },
+    {
+      "id": 34,
+      "type": "ComponentOutput",
+      "pos": [
+        -1100,
+        -130
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "BASIC_PIPE",
+          "type": "BASIC_PIPE",
+          "link": 45,
+          "label": "BASIC_PIPE + VAE"
+        }
+      ],
+      "title": "04.Component Output",
+      "properties": {}
+    },
+    {
+      "id": 21,
+      "type": "ComponentOutput",
+      "pos": [
+        -1220,
+        10
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "link": 21,
+          "label": null
+        }
+      ],
+      "title": "05.Component Output",
+      "properties": {}
+    },
+    {
+      "id": 17,
+      "type": "ComponentOutput",
+      "pos": [
+        -1230,
+        100
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "link": 19,
+          "label": null
+        }
+      ],
+      "title": "06.Component Output",
+      "properties": {}
+    }
+  ],
+  "links": [
+    [
+      1,
+      1,
+      0,
+      2,
+      0,
+      "MODEL"
+    ],
+    [
+      6,
+      10,
+      0,
+      1,
+      0,
+      "animerge_v21.safetensors,aniverse_thxEd14Pruned.safetensors,darkSushi25D25D_v40.safetensors,helloyoung2d_V10h.safetensors,meinapastel_v6Pastel.safetensors,plumpbreastsmix_v11.safetensors"
+    ],
+    [
+      14,
+      6,
+      0,
+      2,
+      1,
+      "FLOAT"
+    ],
+    [
+      15,
+      7,
+      0,
+      2,
+      2,
+      "FLOAT"
+    ],
+    [
+      16,
+      8,
+      0,
+      2,
+      3,
+      "FLOAT"
+    ],
+    [
+      17,
+      9,
+      0,
+      2,
+      4,
+      "FLOAT"
+    ],
+    [
+      18,
+      16,
+      0,
+      14,
+      0,
+      "4x-AnimeSharp.pth,4x-UltraSharp.pth,4x_NMKD-Siax_200k.pth,4x_NMKD-Superscale-SP_178000_G.pth,RealESRGAN_x4plus_anime_6B.pth,realesr-general-x4v3.pth"
+    ],
+    [
+      19,
+      14,
+      0,
+      17,
+      0,
+      "*"
+    ],
+    [
+      20,
+      20,
+      0,
+      18,
+      0,
+      "kl-f8-anime2.ckpt,orangemix.vae.pt,vae-ft-mse-840000-ema-pruned.safetensors"
+    ],
+    [
+      21,
+      18,
+      0,
+      21,
+      0,
+      "*"
+    ],
+    [
+      22,
+      1,
+      1,
+      22,
+      0,
+      "CLIP"
+    ],
+    [
+      25,
+      25,
+      0,
+      22,
+      1,
+      "INT"
+    ],
+    [
+      26,
+      28,
+      0,
+      27,
+      0,
+      "*"
+    ],
+    [
+      27,
+      30,
+      0,
+      29,
+      0,
+      "*"
+    ],
+    [
+      28,
+      2,
+      0,
+      28,
+      0,
+      "MODEL"
+    ],
+    [
+      29,
+      1,
+      0,
+      30,
+      0,
+      "MODEL"
+    ],
+    [
+      30,
+      22,
+      0,
+      28,
+      1,
+      "CLIP"
+    ],
+    [
+      31,
+      22,
+      0,
+      30,
+      1,
+      "CLIP"
+    ],
+    [
+      32,
+      1,
+      2,
+      28,
+      2,
+      "VAE"
+    ],
+    [
+      33,
+      1,
+      2,
+      30,
+      2,
+      "VAE"
+    ],
+    [
+      34,
+      22,
+      0,
+      31,
+      0,
+      "CLIP"
+    ],
+    [
+      35,
+      31,
+      0,
+      28,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      36,
+      31,
+      0,
+      30,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      37,
+      22,
+      0,
+      32,
+      0,
+      "CLIP"
+    ],
+    [
+      38,
+      32,
+      0,
+      30,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      39,
+      32,
+      0,
+      28,
+      4,
+      "CONDITIONING"
+    ],
+    [
+      40,
+      28,
+      0,
+      35,
+      0,
+      "BASIC_PIPE"
+    ],
+    [
+      41,
+      18,
+      0,
+      35,
+      3,
+      "VAE"
+    ],
+    [
+      42,
+      35,
+      0,
+      33,
+      0,
+      "*"
+    ],
+    [
+      43,
+      18,
+      0,
+      36,
+      3,
+      "VAE"
+    ],
+    [
+      44,
+      30,
+      0,
+      36,
+      0,
+      "BASIC_PIPE"
+    ],
+    [
+      45,
+      36,
+      0,
+      34,
+      0,
+      "BASIC_PIPE"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4,
+  "output": {
+    "1": {
+      "inputs": {
+        "ckpt_name": [
+          "10",
+          0
+        ]
+      },
+      "class_type": "CheckpointLoaderSimple"
+    },
+    "2": {
+      "inputs": {
+        "b1": [
+          "6",
+          0
+        ],
+        "b2": [
+          "7",
+          0
+        ],
+        "s1": [
+          "8",
+          0
+        ],
+        "s2": [
+          "9",
+          0
+        ],
+        "model": [
+          "1",
+          0
+        ]
+      },
+      "class_type": "FreeU"
+    },
+    "6": {
+      "inputs": {}
+    },
+    "7": {
+      "inputs": {}
+    },
+    "8": {
+      "inputs": {}
+    },
+    "9": {
+      "inputs": {}
+    },
+    "10": {
+      "inputs": {}
+    },
+    "14": {
+      "inputs": {
+        "model_name": [
+          "16",
+          0
+        ]
+      },
+      "class_type": "UpscaleModelLoader"
+    },
+    "16": {
+      "inputs": {}
+    },
+    "17": {
+      "inputs": {
+        "UPSCALE_MODEL": [
+          "14",
+          0
+        ]
+      }
+    },
+    "18": {
+      "inputs": {
+        "vae_name": [
+          "20",
+          0
+        ]
+      },
+      "class_type": "VAELoader"
+    },
+    "20": {
+      "inputs": {}
+    },
+    "21": {
+      "inputs": {
+        "VAE": [
+          "18",
+          0
+        ]
+      }
+    },
+    "22": {
+      "inputs": {
+        "stop_at_clip_layer": [
+          "25",
+          0
+        ],
+        "clip": [
+          "1",
+          1
+        ]
+      },
+      "class_type": "CLIPSetLastLayer"
+    },
+    "25": {
+      "inputs": {}
+    },
+    "27": {
+      "inputs": {
+        "BASIC_PIPE": [
+          "28",
+          0
+        ]
+      }
+    },
+    "28": {
+      "inputs": {
+        "model": [
+          "2",
+          0
+        ],
+        "clip": [
+          "22",
+          0
+        ],
+        "vae": [
+          "1",
+          2
+        ],
+        "positive": [
+          "31",
+          0
+        ],
+        "negative": [
+          "32",
+          0
+        ]
+      },
+      "class_type": "ToBasicPipe"
+    },
+    "29": {
+      "inputs": {
+        "BASIC_PIPE": [
+          "30",
+          0
+        ]
+      }
+    },
+    "30": {
+      "inputs": {
+        "model": [
+          "1",
+          0
+        ],
+        "clip": [
+          "22",
+          0
+        ],
+        "vae": [
+          "1",
+          2
+        ],
+        "positive": [
+          "31",
+          0
+        ],
+        "negative": [
+          "32",
+          0
+        ]
+      },
+      "class_type": "ToBasicPipe"
+    },
+    "31": {
+      "inputs": {
+        "text": "",
+        "clip": [
+          "22",
+          0
+        ]
+      },
+      "class_type": "CLIPTextEncode"
+    },
+    "32": {
+      "inputs": {
+        "text": "",
+        "clip": [
+          "22",
+          0
+        ]
+      },
+      "class_type": "CLIPTextEncode"
+    },
+    "33": {
+      "inputs": {
+        "BASIC_PIPE": [
+          "35",
+          0
+        ]
+      }
+    },
+    "34": {
+      "inputs": {
+        "BASIC_PIPE": [
+          "36",
+          0
+        ]
+      }
+    },
+    "35": {
+      "inputs": {
+        "basic_pipe": [
+          "28",
+          0
+        ],
+        "vae": [
+          "18",
+          0
+        ]
+      },
+      "class_type": "EditBasicPipe"
+    },
+    "36": {
+      "inputs": {
+        "basic_pipe": [
+          "30",
+          0
+        ],
+        "vae": [
+          "18",
+          0
+        ]
+      },
+      "class_type": "EditBasicPipe"
+    }
+  }
+}

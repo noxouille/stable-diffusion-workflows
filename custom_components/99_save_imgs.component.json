@@ -1,0 +1,671 @@
+{
+  "last_node_id": 11,
+  "last_link_id": 13,
+  "nodes": [
+    {
+      "id": 5,
+      "type": "ComponentInputOptional",
+      "pos": [
+        2470,
+        210
+      ],
+      "size": {
+        "0": 201.60000610351562,
+        "1": 26
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "text_a",
+          "type": "STRING",
+          "links": [
+            3
+          ],
+          "slot_index": 0,
+          "label": "version"
+        }
+      ],
+      "title": "02.Component Input (OPT)",
+      "properties": {}
+    },
+    {
+      "id": 7,
+      "type": "String to Text",
+      "pos": [
+        2450,
+        290
+      ],
+      "size": {
+        "0": 210,
+        "1": 60
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            6
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "String to Text"
+      },
+      "widgets_values": [
+        "_"
+      ]
+    },
+    {
+      "id": 6,
+      "type": "ComponentInputOptional",
+      "pos": [
+        2480,
+        420
+      ],
+      "size": {
+        "0": 201.60000610351562,
+        "1": 26
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "text_b",
+          "type": "STRING",
+          "links": [
+            5
+          ],
+          "slot_index": 0,
+          "label": "name"
+        }
+      ],
+      "title": "03.Component Input (OPT)",
+      "properties": {}
+    },
+    {
+      "id": 3,
+      "type": "ComponentInput",
+      "pos": [
+        2460,
+        90
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            1,
+            2
+          ],
+          "slot_index": 0,
+          "label": "images"
+        }
+      ],
+      "title": "01.Component Input",
+      "properties": {}
+    },
+    {
+      "id": 4,
+      "type": "StringFunction|pysssss",
+      "pos": [
+        2710,
+        230
+      ],
+      "size": {
+        "0": 210,
+        "1": 200
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_a",
+          "type": "STRING",
+          "link": 3,
+          "widget": {
+            "name": "text_a",
+            "config": [
+              "STRING",
+              {
+                "multiline": true
+              }
+            ]
+          },
+          "label": "version"
+        },
+        {
+          "name": "text_b",
+          "type": "STRING",
+          "link": 6,
+          "widget": {
+            "name": "text_b",
+            "config": [
+              "STRING",
+              {
+                "multiline": true
+              }
+            ]
+          },
+          "label": "delimiter"
+        },
+        {
+          "name": "text_c",
+          "type": "STRING",
+          "link": 5,
+          "widget": {
+            "name": "text_c",
+            "config": [
+              "STRING",
+              {
+                "multiline": true
+              }
+            ]
+          },
+          "label": "name"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            8,
+            9,
+            10,
+            11
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringFunction|pysssss"
+      },
+      "widgets_values": [
+        "append",
+        "no",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 10,
+      "type": "StringFunction|pysssss",
+      "pos": [
+        3000,
+        180
+      ],
+      "size": [
+        210,
+        200
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_a",
+          "type": "STRING",
+          "link": 10,
+          "widget": {
+            "name": "text_a",
+            "config": [
+              "STRING",
+              {
+                "multiline": true
+              }
+            ]
+          },
+          "label": "path"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            13
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringFunction|pysssss"
+      },
+      "widgets_values": [
+        "append",
+        "no",
+        "",
+        "_Workflow",
+        ""
+      ]
+    },
+    {
+      "id": 11,
+      "type": "StringFunction|pysssss",
+      "pos": [
+        3000,
+        440
+      ],
+      "size": {
+        "0": 210,
+        "1": 200
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_a",
+          "type": "STRING",
+          "link": 11,
+          "widget": {
+            "name": "text_a",
+            "config": [
+              "STRING",
+              {
+                "multiline": true
+              }
+            ]
+          },
+          "label": "path"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            12
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StringFunction|pysssss"
+      },
+      "widgets_values": [
+        "append",
+        "no",
+        "",
+        "_Stripped",
+        ""
+      ]
+    },
+    {
+      "id": 2,
+      "type": "Image Save",
+      "pos": [
+        3270,
+        80
+      ],
+      "size": [
+        320,
+        350
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 2
+        },
+        {
+          "name": "output_path",
+          "type": "STRING",
+          "link": 9,
+          "widget": {
+            "name": "output_path",
+            "config": [
+              "STRING",
+              {
+                "default": "[time(%Y-%m-%d)]",
+                "multiline": false
+              }
+            ]
+          }
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "link": 13,
+          "widget": {
+            "name": "filename_prefix",
+            "config": [
+              "STRING",
+              {
+                "default": "ComfyUI"
+              }
+            ]
+          }
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Image Save"
+      },
+      "widgets_values": [
+        "[time(%Y-%m-%d)]",
+        "Workflow",
+        "_",
+        4,
+        "false",
+        "png",
+        100,
+        "false",
+        "false",
+        "false",
+        "true",
+        "true",
+        "false"
+      ],
+      "color": "#322",
+      "bgcolor": "#533",
+      "shape": 1
+    },
+    {
+      "id": 1,
+      "type": "Image Save",
+      "pos": [
+        3280,
+        490
+      ],
+      "size": [
+        320,
+        350
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 1
+        },
+        {
+          "name": "output_path",
+          "type": "STRING",
+          "link": 8,
+          "widget": {
+            "name": "output_path",
+            "config": [
+              "STRING",
+              {
+                "default": "[time(%Y-%m-%d)]",
+                "multiline": false
+              }
+            ]
+          }
+        },
+        {
+          "name": "filename_prefix",
+          "type": "STRING",
+          "link": 12,
+          "widget": {
+            "name": "filename_prefix",
+            "config": [
+              "STRING",
+              {
+                "default": "ComfyUI"
+              }
+            ]
+          }
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Image Save"
+      },
+      "widgets_values": [
+        "[time(%Y-%m-%d)]",
+        "Stripped",
+        "_",
+        4,
+        "false",
+        "png",
+        100,
+        "false",
+        "false",
+        "false",
+        "true",
+        "false",
+        "false"
+      ],
+      "color": "#322",
+      "bgcolor": "#533",
+      "shape": 1
+    }
+  ],
+  "links": [
+    [
+      1,
+      3,
+      0,
+      1,
+      0,
+      "IMAGE"
+    ],
+    [
+      2,
+      3,
+      0,
+      2,
+      0,
+      "IMAGE"
+    ],
+    [
+      3,
+      5,
+      0,
+      4,
+      0,
+      "STRING"
+    ],
+    [
+      5,
+      6,
+      0,
+      4,
+      2,
+      "STRING"
+    ],
+    [
+      6,
+      7,
+      0,
+      4,
+      1,
+      "STRING"
+    ],
+    [
+      8,
+      4,
+      0,
+      1,
+      1,
+      "STRING"
+    ],
+    [
+      9,
+      4,
+      0,
+      2,
+      1,
+      "STRING"
+    ],
+    [
+      10,
+      4,
+      0,
+      10,
+      0,
+      "STRING"
+    ],
+    [
+      11,
+      4,
+      0,
+      11,
+      0,
+      "STRING"
+    ],
+    [
+      12,
+      11,
+      0,
+      1,
+      2,
+      "STRING"
+    ],
+    [
+      13,
+      10,
+      0,
+      2,
+      2,
+      "STRING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4,
+  "output": {
+    "1": {
+      "inputs": {
+        "output_path": [
+          "4",
+          0
+        ],
+        "filename_prefix": [
+          "11",
+          0
+        ],
+        "filename_delimiter": "_",
+        "filename_number_padding": 4,
+        "filename_number_start": "false",
+        "extension": "png",
+        "quality": 100,
+        "lossless_webp": "false",
+        "overwrite_mode": "false",
+        "show_history": "false",
+        "show_history_by_prefix": "true",
+        "embed_workflow": "false",
+        "show_previews": "false",
+        "images": [
+          "3",
+          0
+        ]
+      },
+      "class_type": "Image Save"
+    },
+    "2": {
+      "inputs": {
+        "output_path": [
+          "4",
+          0
+        ],
+        "filename_prefix": [
+          "10",
+          0
+        ],
+        "filename_delimiter": "_",
+        "filename_number_padding": 4,
+        "filename_number_start": "false",
+        "extension": "png",
+        "quality": 100,
+        "lossless_webp": "false",
+        "overwrite_mode": "false",
+        "show_history": "false",
+        "show_history_by_prefix": "true",
+        "embed_workflow": "true",
+        "show_previews": "false",
+        "images": [
+          "3",
+          0
+        ]
+      },
+      "class_type": "Image Save"
+    },
+    "3": {
+      "inputs": {}
+    },
+    "4": {
+      "inputs": {
+        "action": "append",
+        "tidy_tags": "no",
+        "text_a": [
+          "5",
+          0
+        ],
+        "text_b": [
+          "7",
+          0
+        ],
+        "text_c": [
+          "6",
+          0
+        ]
+      },
+      "class_type": "StringFunction|pysssss"
+    },
+    "5": {
+      "inputs": {}
+    },
+    "6": {
+      "inputs": {}
+    },
+    "7": {
+      "inputs": {
+        "string": "_"
+      },
+      "class_type": "String to Text"
+    },
+    "10": {
+      "inputs": {
+        "action": "append",
+        "tidy_tags": "no",
+        "text_a": [
+          "4",
+          0
+        ],
+        "text_b": "undefined",
+        "text_c": "undefined"
+      },
+      "class_type": "StringFunction|pysssss"
+    },
+    "11": {
+      "inputs": {
+        "action": "append",
+        "tidy_tags": "no",
+        "text_a": [
+          "4",
+          0
+        ],
+        "text_b": "_Stripped",
+        "text_c": ""
+      },
+      "class_type": "StringFunction|pysssss"
+    }
+  }
+}
