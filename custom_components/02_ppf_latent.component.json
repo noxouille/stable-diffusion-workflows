@@ -1,0 +1,1300 @@
+{
+  "last_node_id": 62,
+  "last_link_id": 46,
+  "nodes": [
+    {
+      "id": 27,
+      "type": "ComponentInput",
+      "pos": [
+        -4860,
+        310
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            29
+          ],
+          "slot_index": 0,
+          "label": "width"
+        }
+      ],
+      "title": "02.Component Input",
+      "properties": {}
+    },
+    {
+      "id": 28,
+      "type": "ComponentInput",
+      "pos": [
+        -4860,
+        380
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            30
+          ],
+          "slot_index": 0,
+          "label": "height"
+        }
+      ],
+      "title": "03.Component Input",
+      "properties": {}
+    },
+    {
+      "id": 30,
+      "type": "ComponentInputOptional",
+      "pos": [
+        -4880,
+        460
+      ],
+      "size": {
+        "0": 201.60000610351562,
+        "1": 26
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "batch_size",
+          "type": "INT",
+          "links": [
+            32
+          ],
+          "slot_index": 0,
+          "label": "batch_size"
+        }
+      ],
+      "title": "04.Component Input (OPT)",
+      "properties": {}
+    },
+    {
+      "id": 31,
+      "type": "ComponentInputOptional",
+      "pos": [
+        -4870,
+        550
+      ],
+      "size": {
+        "0": 201.60000610351562,
+        "1": 26
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "seed",
+          "type": "INT",
+          "links": [
+            33
+          ],
+          "slot_index": 0,
+          "label": "seed"
+        }
+      ],
+      "title": "05.Component Input (OPT)",
+      "properties": {}
+    },
+    {
+      "id": 29,
+      "type": "ComponentInputOptional",
+      "pos": [
+        -4860,
+        170
+      ],
+      "size": {
+        "0": 201.60000610351562,
+        "1": 26
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "optional_vae",
+          "type": "VAE",
+          "links": [
+            31
+          ],
+          "slot_index": 0,
+          "label": "optional_vae"
+        }
+      ],
+      "title": "01.Component Input (OPT)",
+      "properties": {}
+    },
+    {
+      "id": 16,
+      "type": "Perlin Power Fractal Latent (PPF Noise)",
+      "pos": [
+        -4560,
+        270
+      ],
+      "size": {
+        "0": 320,
+        "1": 560
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "optional_vae",
+          "type": "VAE",
+          "link": 31
+        },
+        {
+          "name": "ppf_settings",
+          "type": "PPF_SETTINGS",
+          "link": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": 29,
+          "widget": {
+            "name": "width",
+            "config": [
+              "INT",
+              {
+                "default": 512,
+                "max": 8192,
+                "min": 64,
+                "step": 1
+              }
+            ]
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": 30,
+          "widget": {
+            "name": "height",
+            "config": [
+              "INT",
+              {
+                "default": 512,
+                "max": 8192,
+                "min": 64,
+                "step": 1
+              }
+            ]
+          }
+        },
+        {
+          "name": "batch_size",
+          "type": "INT",
+          "link": 32,
+          "widget": {
+            "name": "batch_size",
+            "config": [
+              "INT",
+              {
+                "default": 1,
+                "max": 64,
+                "min": 1,
+                "step": 1
+              }
+            ]
+          }
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 33,
+          "widget": {
+            "name": "seed",
+            "config": [
+              "INT",
+              {
+                "default": 0,
+                "min": 0,
+                "max": 18446744073709552000
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "latents",
+          "type": "LATENT",
+          "links": [
+            3,
+            25
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "color": "#FF9CF9"
+        },
+        {
+          "name": "previews",
+          "type": "IMAGE",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Perlin Power Fractal Latent (PPF Noise)"
+      },
+      "widgets_values": [
+        1,
+        512,
+        512,
+        "nearest-exact",
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        4,
+        1,
+        2,
+        4,
+        0,
+        0,
+        0,
+        1,
+        277793378093273,
+        "fixed",
+        "cpu"
+      ],
+      "shape": 1
+    },
+    {
+      "id": 4,
+      "type": "Get latent size",
+      "pos": [
+        -4190,
+        270
+      ],
+      "size": {
+        "0": 210,
+        "1": 98
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "latent",
+          "type": "LATENT",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            1,
+            10,
+            20
+          ],
+          "shape": 3,
+          "label": "WIDTH",
+          "slot_index": 0,
+          "color": ""
+        },
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            19,
+            41,
+            43
+          ],
+          "shape": 3,
+          "label": "HEIGHT",
+          "slot_index": 1,
+          "color": ""
+        },
+        {
+          "name": "TUPLE",
+          "type": "TUPLE",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Get latent size"
+      },
+      "widgets_values": [
+        false
+      ],
+      "shape": 1
+    },
+    {
+      "id": 22,
+      "type": "ComponentOutput",
+      "pos": [
+        -3370,
+        130
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "link": 25,
+          "label": null
+        }
+      ],
+      "title": "01.Component Output",
+      "properties": {}
+    },
+    {
+      "id": 2,
+      "type": "CM_IntBinaryOperation",
+      "pos": [
+        -3900,
+        390
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT",
+          "link": 1,
+          "widget": {
+            "name": "a",
+            "config": [
+              "INT",
+              {
+                "default": 0
+              }
+            ]
+          },
+          "label": "WIDTH"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            2,
+            21
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "1/3 WIDTH",
+          "color": ""
+        }
+      ],
+      "title": "1/3 Width",
+      "properties": {
+        "Node name for S&R": "CM_IntBinaryOperation"
+      },
+      "widgets_values": [
+        "Div",
+        1344,
+        3
+      ],
+      "shape": 1
+    },
+    {
+      "id": 11,
+      "type": "CM_IntBinaryOperation",
+      "pos": [
+        -3910,
+        700
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT",
+          "link": 10,
+          "widget": {
+            "name": "a",
+            "config": [
+              "INT",
+              {
+                "default": 0
+              }
+            ]
+          },
+          "label": "WIDTH"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            23,
+            26
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "1/2 WIDTH",
+          "color": ""
+        }
+      ],
+      "title": "1/2 Width",
+      "properties": {
+        "Node name for S&R": "CM_IntBinaryOperation"
+      },
+      "widgets_values": [
+        "Div",
+        1344,
+        2
+      ],
+      "shape": 1
+    },
+    {
+      "id": 19,
+      "type": "ComponentOutput",
+      "pos": [
+        -3380,
+        210
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "WIDTH",
+          "type": "INT",
+          "link": 20,
+          "label": "WIDTH"
+        }
+      ],
+      "title": "02.Component Output",
+      "properties": {}
+    },
+    {
+      "id": 18,
+      "type": "ComponentOutput",
+      "pos": [
+        -3370,
+        300
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "HEIGHT",
+          "type": "INT",
+          "link": 19,
+          "label": "HEIGHT"
+        }
+      ],
+      "title": "03.Component Output",
+      "properties": {}
+    },
+    {
+      "id": 40,
+      "type": "CM_IntBinaryOperation",
+      "pos": [
+        -3900,
+        570
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT",
+          "link": 41,
+          "widget": {
+            "name": "a",
+            "config": [
+              "INT",
+              {
+                "default": 0
+              }
+            ]
+          },
+          "label": "HEIGHT"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            42
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "1/3 HEIGHT",
+          "color": ""
+        }
+      ],
+      "title": "1/3 Height",
+      "properties": {
+        "Node name for S&R": "CM_IntBinaryOperation"
+      },
+      "widgets_values": [
+        "Div",
+        1344,
+        3
+      ],
+      "shape": 1
+    },
+    {
+      "id": 44,
+      "type": "CM_IntBinaryOperation",
+      "pos": [
+        -3910,
+        920
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT",
+          "link": 43,
+          "widget": {
+            "name": "a",
+            "config": [
+              "INT",
+              {
+                "default": 0
+              }
+            ]
+          },
+          "label": "HEIGHT"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            44
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "1/2 HEIGHT",
+          "color": ""
+        }
+      ],
+      "title": "1/2 Height",
+      "properties": {
+        "Node name for S&R": "CM_IntBinaryOperation"
+      },
+      "widgets_values": [
+        "Div",
+        1344,
+        2
+      ],
+      "shape": 1
+    },
+    {
+      "id": 3,
+      "type": "CM_IntBinaryOperation",
+      "pos": [
+        -3660,
+        490
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT",
+          "link": 2,
+          "widget": {
+            "name": "a",
+            "config": [
+              "INT",
+              {
+                "default": 0
+              }
+            ]
+          },
+          "label": "WIDTH"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            22
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "X OFFSET (R)",
+          "color": ""
+        }
+      ],
+      "title": "X Offset (R)",
+      "properties": {
+        "Node name for S&R": "CM_IntBinaryOperation"
+      },
+      "widgets_values": [
+        "Mul",
+        0,
+        2
+      ],
+      "shape": 1
+    },
+    {
+      "id": 20,
+      "type": "ComponentOutput",
+      "pos": [
+        -3360,
+        390
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "1/3 WIDTH",
+          "type": "INT",
+          "link": 21,
+          "label": "1/3 WIDTH"
+        }
+      ],
+      "title": "04.Component Output",
+      "properties": {}
+    },
+    {
+      "id": 21,
+      "type": "ComponentOutput",
+      "pos": [
+        -3340,
+        690
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "1/2 WIDTH",
+          "type": "INT",
+          "link": 23,
+          "label": "1/2 WIDTH"
+        }
+      ],
+      "title": "07.Component Output",
+      "properties": {}
+    },
+    {
+      "id": 25,
+      "type": "CM_IntBinaryOperation",
+      "pos": [
+        -3640,
+        820
+      ],
+      "size": {
+        "0": 210,
+        "1": 82
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "a",
+          "type": "INT",
+          "link": 26,
+          "widget": {
+            "name": "a",
+            "config": [
+              "INT",
+              {
+                "default": 0
+              }
+            ]
+          },
+          "label": "HEIGHT"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            27
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "label": "Y OFFSET (B)",
+          "color": ""
+        }
+      ],
+      "title": "Y Offset (B)",
+      "properties": {
+        "Node name for S&R": "CM_IntBinaryOperation"
+      },
+      "widgets_values": [
+        "Mul",
+        0,
+        2
+      ],
+      "shape": 1
+    },
+    {
+      "id": 41,
+      "type": "ComponentOutput",
+      "pos": [
+        -3340,
+        590
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "1/3 HEIGHT",
+          "type": "INT",
+          "link": 42,
+          "label": "1/3 HEIGHT"
+        }
+      ],
+      "title": "06.Component Output",
+      "properties": {}
+    },
+    {
+      "id": 23,
+      "type": "ComponentOutput",
+      "pos": [
+        -3360,
+        500
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "X OFFSET (R)",
+          "type": "INT",
+          "link": 22,
+          "label": "X OFFSET (R)"
+        }
+      ],
+      "title": "05.Component Output",
+      "properties": {}
+    },
+    {
+      "id": 26,
+      "type": "ComponentOutput",
+      "pos": [
+        -3340,
+        800
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "Y OFFSET (B)",
+          "type": "INT",
+          "link": 27,
+          "label": "Y OFFSET (B)"
+        }
+      ],
+      "title": "08.Component Output",
+      "properties": {}
+    },
+    {
+      "id": 42,
+      "type": "ComponentOutput",
+      "pos": [
+        -3330,
+        930
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "1/2 HEIGHT",
+          "type": "INT",
+          "link": 44,
+          "label": "1/2 HEIGHT"
+        }
+      ],
+      "title": "09.Component Output",
+      "properties": {}
+    }
+  ],
+  "links": [
+    [
+      1,
+      4,
+      0,
+      2,
+      0,
+      "INT"
+    ],
+    [
+      2,
+      2,
+      0,
+      3,
+      0,
+      "INT"
+    ],
+    [
+      3,
+      16,
+      0,
+      4,
+      0,
+      "LATENT"
+    ],
+    [
+      10,
+      4,
+      0,
+      11,
+      0,
+      "INT"
+    ],
+    [
+      19,
+      4,
+      1,
+      18,
+      0,
+      "INT"
+    ],
+    [
+      20,
+      4,
+      0,
+      19,
+      0,
+      "*"
+    ],
+    [
+      21,
+      2,
+      0,
+      20,
+      0,
+      "INT"
+    ],
+    [
+      22,
+      3,
+      0,
+      23,
+      0,
+      "INT"
+    ],
+    [
+      23,
+      11,
+      0,
+      21,
+      0,
+      "INT"
+    ],
+    [
+      25,
+      16,
+      0,
+      22,
+      0,
+      "LATENT"
+    ],
+    [
+      26,
+      11,
+      0,
+      25,
+      0,
+      "INT"
+    ],
+    [
+      27,
+      25,
+      0,
+      26,
+      0,
+      "*"
+    ],
+    [
+      29,
+      27,
+      0,
+      16,
+      2,
+      "INT"
+    ],
+    [
+      30,
+      28,
+      0,
+      16,
+      3,
+      "INT"
+    ],
+    [
+      31,
+      29,
+      0,
+      16,
+      0,
+      "VAE"
+    ],
+    [
+      32,
+      30,
+      0,
+      16,
+      4,
+      "INT"
+    ],
+    [
+      33,
+      31,
+      0,
+      16,
+      5,
+      "INT"
+    ],
+    [
+      41,
+      4,
+      1,
+      40,
+      0,
+      "INT"
+    ],
+    [
+      42,
+      40,
+      0,
+      41,
+      0,
+      "*"
+    ],
+    [
+      43,
+      4,
+      1,
+      44,
+      0,
+      "INT"
+    ],
+    [
+      44,
+      44,
+      0,
+      42,
+      0,
+      "INT"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4,
+  "output": {
+    "2": {
+      "inputs": {
+        "op": "Div",
+        "a": [
+          "4",
+          0
+        ],
+        "b": 3
+      },
+      "class_type": "CM_IntBinaryOperation"
+    },
+    "3": {
+      "inputs": {
+        "op": "Mul",
+        "a": [
+          "2",
+          0
+        ],
+        "b": 2
+      },
+      "class_type": "CM_IntBinaryOperation"
+    },
+    "4": {
+      "inputs": {
+        "original": false,
+        "latent": [
+          "16",
+          0
+        ]
+      },
+      "class_type": "Get latent size"
+    },
+    "11": {
+      "inputs": {
+        "op": "Div",
+        "a": [
+          "4",
+          0
+        ],
+        "b": 2
+      },
+      "class_type": "CM_IntBinaryOperation"
+    },
+    "16": {
+      "inputs": {
+        "batch_size": [
+          "30",
+          0
+        ],
+        "width": [
+          "27",
+          0
+        ],
+        "height": [
+          "28",
+          0
+        ],
+        "resampling": "nearest-exact",
+        "X": 0,
+        "Y": 0,
+        "Z": 0,
+        "evolution": 0,
+        "frame": 0,
+        "scale": 5,
+        "octaves": 4,
+        "persistence": 1,
+        "lacunarity": 2,
+        "exponent": 4,
+        "brightness": 0,
+        "contrast": 0,
+        "clamp_min": 0,
+        "clamp_max": 1,
+        "seed": [
+          "31",
+          0
+        ],
+        "device": "cpu",
+        "optional_vae": [
+          "29",
+          0
+        ]
+      },
+      "class_type": "Perlin Power Fractal Latent (PPF Noise)"
+    },
+    "18": {
+      "inputs": {
+        "HEIGHT": [
+          "4",
+          1
+        ]
+      }
+    },
+    "19": {
+      "inputs": {
+        "WIDTH": [
+          "4",
+          0
+        ]
+      }
+    },
+    "20": {
+      "inputs": {
+        "1/3 WIDTH": [
+          "2",
+          0
+        ]
+      }
+    },
+    "21": {
+      "inputs": {
+        "1/2 WIDTH": [
+          "11",
+          0
+        ]
+      }
+    },
+    "22": {
+      "inputs": {
+        "LATENT": [
+          "16",
+          0
+        ]
+      }
+    },
+    "23": {
+      "inputs": {
+        "X OFFSET (R)": [
+          "3",
+          0
+        ]
+      }
+    },
+    "25": {
+      "inputs": {
+        "op": "Mul",
+        "a": [
+          "11",
+          0
+        ],
+        "b": 2
+      },
+      "class_type": "CM_IntBinaryOperation"
+    },
+    "26": {
+      "inputs": {
+        "Y OFFSET (B)": [
+          "25",
+          0
+        ]
+      }
+    },
+    "27": {
+      "inputs": {}
+    },
+    "28": {
+      "inputs": {}
+    },
+    "29": {
+      "inputs": {}
+    },
+    "30": {
+      "inputs": {}
+    },
+    "31": {
+      "inputs": {}
+    },
+    "40": {
+      "inputs": {
+        "op": "Div",
+        "a": [
+          "4",
+          1
+        ],
+        "b": 3
+      },
+      "class_type": "CM_IntBinaryOperation"
+    },
+    "41": {
+      "inputs": {
+        "1/3 HEIGHT": [
+          "40",
+          0
+        ]
+      }
+    },
+    "42": {
+      "inputs": {
+        "1/2 HEIGHT": [
+          "44",
+          0
+        ]
+      }
+    },
+    "44": {
+      "inputs": {
+        "op": "Div",
+        "a": [
+          "4",
+          1
+        ],
+        "b": 2
+      },
+      "class_type": "CM_IntBinaryOperation"
+    }
+  }
+}

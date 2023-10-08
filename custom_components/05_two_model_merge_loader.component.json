@@ -1,0 +1,1972 @@
+{
+  "last_node_id": 45,
+  "last_link_id": 60,
+  "nodes": [
+    {
+      "id": 6,
+      "type": "ComponentInputOptional",
+      "pos": [
+        -3230,
+        270
+      ],
+      "size": {
+        "0": 201.60000610351562,
+        "1": 26
+      },
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "b1",
+          "type": "FLOAT",
+          "links": [
+            14,
+            44,
+            49
+          ],
+          "slot_index": 0,
+          "label": "freeu_b1"
+        }
+      ],
+      "title": "06.Component Input (OPT)",
+      "properties": {}
+    },
+    {
+      "id": 8,
+      "type": "ComponentInputOptional",
+      "pos": [
+        -3250,
+        420
+      ],
+      "size": {
+        "0": 201.60000610351562,
+        "1": 26
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "s1",
+          "type": "FLOAT",
+          "links": [
+            16,
+            46,
+            51
+          ],
+          "slot_index": 0,
+          "label": "freeu_s1"
+        }
+      ],
+      "title": "08.Component Input (OPT)",
+      "properties": {}
+    },
+    {
+      "id": 9,
+      "type": "ComponentInputOptional",
+      "pos": [
+        -3240,
+        520
+      ],
+      "size": {
+        "0": 201.60000610351562,
+        "1": 26
+      },
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "s2",
+          "type": "FLOAT",
+          "links": [
+            17,
+            47,
+            52
+          ],
+          "slot_index": 0,
+          "label": "freeu_s2"
+        }
+      ],
+      "title": "09.Component Input (OPT)",
+      "properties": {}
+    },
+    {
+      "id": 16,
+      "type": "ComponentInputOptional",
+      "pos": [
+        -3220,
+        160
+      ],
+      "size": {
+        "0": 201.60000610351562,
+        "1": 26
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "model_name",
+          "type": "4x-AnimeSharp.pth,4x-UltraSharp.pth,4x_NMKD-Siax_200k.pth,4x_NMKD-Superscale-SP_178000_G.pth,RealESRGAN_x4plus_anime_6B.pth,realesr-general-x4v3.pth",
+          "links": [
+            18
+          ],
+          "slot_index": 0,
+          "label": "upscale_model"
+        }
+      ],
+      "title": "05.Component Input (OPT)",
+      "properties": {}
+    },
+    {
+      "id": 20,
+      "type": "ComponentInputOptional",
+      "pos": [
+        -3240,
+        70
+      ],
+      "size": {
+        "0": 201.60000610351562,
+        "1": 26
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "vae_name",
+          "type": "kl-f8-anime2.ckpt,orangemix.vae.pt,vae-ft-mse-840000-ema-pruned.safetensors",
+          "links": [
+            20
+          ],
+          "slot_index": 0,
+          "label": "vae_name"
+        }
+      ],
+      "title": "04.Component Input (OPT)",
+      "properties": {}
+    },
+    {
+      "id": 7,
+      "type": "ComponentInputOptional",
+      "pos": [
+        -3230,
+        340
+      ],
+      "size": {
+        "0": 201.60000610351562,
+        "1": 26
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "b2",
+          "type": "FLOAT",
+          "links": [
+            15,
+            45,
+            50
+          ],
+          "slot_index": 0,
+          "label": "freeu_b2"
+        }
+      ],
+      "title": "07.Component Input (OPT)",
+      "properties": {}
+    },
+    {
+      "id": 25,
+      "type": "ComponentInputOptional",
+      "pos": [
+        -3230,
+        600
+      ],
+      "size": {
+        "0": 201.60000610351562,
+        "1": 26
+      },
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "stop_at_clip_layer",
+          "type": "INT",
+          "links": [
+            25
+          ],
+          "slot_index": 0,
+          "label": "stop_at_clip_layer"
+        }
+      ],
+      "title": "10.Component Input (OPT)",
+      "properties": {}
+    },
+    {
+      "id": 35,
+      "type": "ComponentInputOptional",
+      "pos": [
+        -3200,
+        -50
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "Value",
+          "type": "FLOAT",
+          "links": [
+            33
+          ],
+          "slot_index": 0,
+          "label": "merge_ratio"
+        }
+      ],
+      "title": "03.Component Input (OPT)",
+      "properties": {}
+    },
+    {
+      "id": 10,
+      "type": "ComponentInput",
+      "pos": [
+        -3200,
+        -240
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "ckpt_name",
+          "type": "animerge_v21.safetensors,aniverse_thxEd14Pruned.safetensors,darkSushi25D25D_v40.safetensors,helloyoung2d_V10h.safetensors,meinapastel_v6Pastel.safetensors,plumpbreastsmix_v11.safetensors",
+          "links": [
+            6
+          ],
+          "slot_index": 0,
+          "label": "ckpt_name_A"
+        }
+      ],
+      "title": "01.Component Input",
+      "properties": {}
+    },
+    {
+      "id": 38,
+      "type": "ComponentInputOptional",
+      "pos": [
+        -3200,
+        -140
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "ckpt_name",
+          "type": "animerge_v21.safetensors,aniverse_thxEd14Pruned.safetensors,darkSushi25D25D_v40.safetensors,helloyoung2d_V10h.safetensors,meinapastel_v6Pastel.safetensors,plumpbreastsmix_v11.safetensors",
+          "links": [
+            42
+          ],
+          "slot_index": 0,
+          "label": "ckpt_name_B"
+        }
+      ],
+      "title": "02.Component Input (OPT)",
+      "properties": {}
+    },
+    {
+      "id": 14,
+      "type": "UpscaleModelLoader",
+      "pos": [
+        -2730,
+        400
+      ],
+      "size": {
+        "0": 320,
+        "1": 60
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model_name",
+          "type": "4x-AnimeSharp.pth,4x-UltraSharp.pth,4x_NMKD-Siax_200k.pth,4x_NMKD-Superscale-SP_178000_G.pth,RealESRGAN_x4plus_anime_6B.pth,realesr-general-x4v3.pth",
+          "link": 18,
+          "widget": {
+            "name": "model_name",
+            "config": [
+              [
+                "4x-AnimeSharp.pth",
+                "4x-UltraSharp.pth",
+                "4x_NMKD-Siax_200k.pth",
+                "4x_NMKD-Superscale-SP_178000_G.pth",
+                "RealESRGAN_x4plus_anime_6B.pth",
+                "realesr-general-x4v3.pth"
+              ]
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": [
+            19
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "color": ""
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "UpscaleModelLoader"
+      },
+      "widgets_values": [
+        "4x-AnimeSharp.pth"
+      ]
+    },
+    {
+      "id": 18,
+      "type": "VAELoader",
+      "pos": [
+        -2730,
+        280
+      ],
+      "size": {
+        "0": 320,
+        "1": 60
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "vae_name",
+          "type": "kl-f8-anime2.ckpt,orangemix.vae.pt,vae-ft-mse-840000-ema-pruned.safetensors",
+          "link": 20,
+          "widget": {
+            "name": "vae_name",
+            "config": [
+              [
+                "kl-f8-anime2.ckpt",
+                "orangemix.vae.pt",
+                "vae-ft-mse-840000-ema-pruned.safetensors"
+              ]
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            21
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "color": "#FF6E6E"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "kl-f8-anime2.ckpt"
+      ]
+    },
+    {
+      "id": 34,
+      "type": "Float",
+      "pos": [
+        -2740,
+        130
+      ],
+      "size": [
+        210,
+        60
+      ],
+      "flags": {
+        "pinned": false
+      },
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "Value",
+          "type": "FLOAT",
+          "link": 33,
+          "widget": {
+            "name": "Value",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1,
+                "min": -1.7976931348623157e+308,
+                "max": 1.7976931348623157e+308,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": [
+            29,
+            32
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "title": "ratio = A * (X-1) + B * X",
+      "properties": {
+        "Node name for S&R": "Float"
+      },
+      "widgets_values": [
+        0.2
+      ],
+      "color": "#222",
+      "bgcolor": "#000",
+      "shape": 1
+    },
+    {
+      "id": 1,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -2710,
+        -260
+      ],
+      "size": [
+        210,
+        70
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "ckpt_name",
+          "type": "animerge_v21.safetensors,aniverse_thxEd14Pruned.safetensors,darkSushi25D25D_v40.safetensors,helloyoung2d_V10h.safetensors,meinapastel_v6Pastel.safetensors,plumpbreastsmix_v11.safetensors",
+          "link": 6,
+          "widget": {
+            "name": "ckpt_name",
+            "config": [
+              [
+                "animerge_v21.safetensors",
+                "aniverse_thxEd14Pruned.safetensors",
+                "darkSushi25D25D_v40.safetensors",
+                "helloyoung2d_V10h.safetensors",
+                "meinapastel_v6Pastel.safetensors",
+                "plumpbreastsmix_v11.safetensors"
+              ]
+            ]
+          },
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            35,
+            53,
+            55
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "color": "#B39DDB"
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            38
+          ],
+          "shape": 3,
+          "slot_index": 1,
+          "color": "#FFD500"
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            10
+          ],
+          "shape": 3,
+          "slot_index": 2,
+          "color": "#FF6E6E"
+        }
+      ],
+      "title": "Load Checkpoint A",
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "animerge_v21.safetensors"
+      ]
+    },
+    {
+      "id": 36,
+      "type": "CheckpointLoaderSimple",
+      "pos": [
+        -2690,
+        -40
+      ],
+      "size": [
+        210,
+        70
+      ],
+      "flags": {},
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "ckpt_name",
+          "type": "animerge_v21.safetensors,aniverse_thxEd14Pruned.safetensors,darkSushi25D25D_v40.safetensors,helloyoung2d_V10h.safetensors,meinapastel_v6Pastel.safetensors,plumpbreastsmix_v11.safetensors",
+          "link": 42,
+          "widget": {
+            "name": "ckpt_name",
+            "config": [
+              [
+                "animerge_v21.safetensors",
+                "aniverse_thxEd14Pruned.safetensors",
+                "darkSushi25D25D_v40.safetensors",
+                "helloyoung2d_V10h.safetensors",
+                "meinapastel_v6Pastel.safetensors",
+                "plumpbreastsmix_v11.safetensors"
+              ]
+            ]
+          },
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            36,
+            57,
+            59
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "color": "#B39DDB"
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            39
+          ],
+          "shape": 3,
+          "slot_index": 1,
+          "color": "#FFD500"
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            60
+          ],
+          "shape": 3,
+          "slot_index": 2,
+          "color": "#FF6E6E"
+        }
+      ],
+      "title": "Load Checkpoint B",
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "animerge_v21.safetensors"
+      ]
+    },
+    {
+      "id": 21,
+      "type": "ComponentOutput",
+      "pos": [
+        -1530,
+        210
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "link": 21,
+          "label": null
+        }
+      ],
+      "title": "09.Component Output",
+      "properties": {}
+    },
+    {
+      "id": 41,
+      "type": "FreeU",
+      "pos": [
+        -1940,
+        -500
+      ],
+      "size": [
+        210,
+        110
+      ],
+      "flags": {},
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 53
+        },
+        {
+          "name": "b1",
+          "type": "FLOAT",
+          "link": 44,
+          "widget": {
+            "name": "b1",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1.1,
+                "min": 0,
+                "max": 10,
+                "step": 0.01
+              }
+            ]
+          }
+        },
+        {
+          "name": "b2",
+          "type": "FLOAT",
+          "link": 45,
+          "widget": {
+            "name": "b2",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1.2,
+                "min": 0,
+                "max": 10,
+                "step": 0.01
+              }
+            ]
+          }
+        },
+        {
+          "name": "s1",
+          "type": "FLOAT",
+          "link": 46,
+          "widget": {
+            "name": "s1",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0.9,
+                "min": 0,
+                "max": 10,
+                "step": 0.01
+              }
+            ]
+          }
+        },
+        {
+          "name": "s2",
+          "type": "FLOAT",
+          "link": 47,
+          "widget": {
+            "name": "s2",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0.2,
+                "min": 0,
+                "max": 10,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            54
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "color": "#B39DDB"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FreeU"
+      },
+      "widgets_values": [
+        1.4000000000000001,
+        1,
+        1.3,
+        0.5
+      ]
+    },
+    {
+      "id": 39,
+      "type": "ComponentOutput",
+      "pos": [
+        -1540,
+        -480
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "link": 55,
+          "label": "MODEL_A"
+        }
+      ],
+      "title": "03.Component Output",
+      "properties": {}
+    },
+    {
+      "id": 31,
+      "type": "ModelMergeSimple",
+      "pos": [
+        -2290,
+        -230
+      ],
+      "size": {
+        "0": 210,
+        "1": 80
+      },
+      "flags": {
+        "pinned": false,
+        "collapsed": false
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model1",
+          "type": "MODEL",
+          "link": 35
+        },
+        {
+          "name": "model2",
+          "type": "MODEL",
+          "link": 36
+        },
+        {
+          "name": "ratio",
+          "type": "FLOAT",
+          "link": 29,
+          "widget": {
+            "name": "ratio",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1,
+                "min": 0,
+                "max": 1,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            37
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ModelMergeSimple"
+      },
+      "widgets_values": [
+        0.1
+      ],
+      "color": "#323",
+      "bgcolor": "#535",
+      "shape": 1
+    },
+    {
+      "id": 42,
+      "type": "FreeU",
+      "pos": [
+        -1910,
+        -260
+      ],
+      "size": [
+        210,
+        110
+      ],
+      "flags": {},
+      "order": 21,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 57
+        },
+        {
+          "name": "b1",
+          "type": "FLOAT",
+          "link": 49,
+          "widget": {
+            "name": "b1",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1.1,
+                "min": 0,
+                "max": 10,
+                "step": 0.01
+              }
+            ]
+          }
+        },
+        {
+          "name": "b2",
+          "type": "FLOAT",
+          "link": 50,
+          "widget": {
+            "name": "b2",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1.2,
+                "min": 0,
+                "max": 10,
+                "step": 0.01
+              }
+            ]
+          }
+        },
+        {
+          "name": "s1",
+          "type": "FLOAT",
+          "link": 51,
+          "widget": {
+            "name": "s1",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0.9,
+                "min": 0,
+                "max": 10,
+                "step": 0.01
+              }
+            ]
+          }
+        },
+        {
+          "name": "s2",
+          "type": "FLOAT",
+          "link": 52,
+          "widget": {
+            "name": "s2",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0.2,
+                "min": 0,
+                "max": 10,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            58
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "color": "#B39DDB"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FreeU"
+      },
+      "widgets_values": [
+        1.4000000000000001,
+        1,
+        1.3,
+        0.5
+      ]
+    },
+    {
+      "id": 44,
+      "type": "ComponentOutput",
+      "pos": [
+        -1530,
+        -120
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "link": 59,
+          "label": "MODEL_B"
+        }
+      ],
+      "title": "06.Component Output",
+      "properties": {}
+    },
+    {
+      "id": 33,
+      "type": "CLIPMergeSimple",
+      "pos": [
+        -2280,
+        160
+      ],
+      "size": {
+        "0": 210,
+        "1": 90
+      },
+      "flags": {
+        "pinned": false,
+        "collapsed": false
+      },
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip1",
+          "type": "CLIP",
+          "link": 38
+        },
+        {
+          "name": "clip2",
+          "type": "CLIP",
+          "link": 39
+        },
+        {
+          "name": "ratio",
+          "type": "FLOAT",
+          "link": 32,
+          "widget": {
+            "name": "ratio",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1,
+                "min": 0,
+                "max": 1,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            40
+          ],
+          "shape": 3,
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPMergeSimple"
+      },
+      "widgets_values": [
+        0.1
+      ],
+      "color": "#432",
+      "bgcolor": "#653",
+      "shape": 1
+    },
+    {
+      "id": 45,
+      "type": "ComponentOutput",
+      "pos": [
+        -1530,
+        -30
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "link": 60,
+          "label": "BAKED_VAE_B"
+        }
+      ],
+      "title": "07.Component Output",
+      "properties": {}
+    },
+    {
+      "id": 4,
+      "type": "ComponentOutput",
+      "pos": [
+        -1550,
+        -580
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 25,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "link": 54,
+          "label": "MODEL_A_FREEU"
+        }
+      ],
+      "title": "02.Component Output",
+      "properties": {}
+    },
+    {
+      "id": 2,
+      "type": "FreeU",
+      "pos": [
+        -2000,
+        -700
+      ],
+      "size": {
+        "0": 320,
+        "1": 130
+      },
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 37
+        },
+        {
+          "name": "b1",
+          "type": "FLOAT",
+          "link": 14,
+          "widget": {
+            "name": "b1",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1.1,
+                "min": 0,
+                "max": 10,
+                "step": 0.01
+              }
+            ]
+          }
+        },
+        {
+          "name": "b2",
+          "type": "FLOAT",
+          "link": 15,
+          "widget": {
+            "name": "b2",
+            "config": [
+              "FLOAT",
+              {
+                "default": 1.2,
+                "min": 0,
+                "max": 10,
+                "step": 0.01
+              }
+            ]
+          }
+        },
+        {
+          "name": "s1",
+          "type": "FLOAT",
+          "link": 16,
+          "widget": {
+            "name": "s1",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0.9,
+                "min": 0,
+                "max": 10,
+                "step": 0.01
+              }
+            ]
+          }
+        },
+        {
+          "name": "s2",
+          "type": "FLOAT",
+          "link": 17,
+          "widget": {
+            "name": "s2",
+            "config": [
+              "FLOAT",
+              {
+                "default": 0.2,
+                "min": 0,
+                "max": 10,
+                "step": 0.01
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            7
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "color": "#B39DDB"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "FreeU"
+      },
+      "widgets_values": [
+        1.4000000000000001,
+        1,
+        1.3,
+        0.5
+      ]
+    },
+    {
+      "id": 43,
+      "type": "ComponentOutput",
+      "pos": [
+        -1540,
+        -220
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "link": 58,
+          "label": "MODEL_B_FREEU"
+        }
+      ],
+      "title": "05.Component Output",
+      "properties": {}
+    },
+    {
+      "id": 22,
+      "type": "CLIPSetLastLayer",
+      "pos": [
+        -1960,
+        120
+      ],
+      "size": {
+        "0": 210,
+        "1": 60
+      },
+      "flags": {},
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 40
+        },
+        {
+          "name": "stop_at_clip_layer",
+          "type": "INT",
+          "link": 25,
+          "widget": {
+            "name": "stop_at_clip_layer",
+            "config": [
+              "INT",
+              {
+                "default": -1,
+                "min": -24,
+                "max": -1,
+                "step": 1
+              }
+            ]
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            23
+          ],
+          "shape": 3,
+          "slot_index": 0,
+          "color": "#FFD500"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPSetLastLayer"
+      },
+      "widgets_values": [
+        -2
+      ]
+    },
+    {
+      "id": 3,
+      "type": "ComponentOutput",
+      "pos": [
+        -1570,
+        -700
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "link": 7,
+          "label": "MERGED_MODEL_FREEU"
+        }
+      ],
+      "title": "01.Component Output",
+      "properties": {}
+    },
+    {
+      "id": 5,
+      "type": "ComponentOutput",
+      "pos": [
+        -1540,
+        90
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "link": 23,
+          "label": "MERGED_CLIP"
+        }
+      ],
+      "title": "08.Component Output",
+      "properties": {}
+    },
+    {
+      "id": 17,
+      "type": "ComponentOutput",
+      "pos": [
+        -1530,
+        320
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "link": 19,
+          "label": null
+        }
+      ],
+      "title": "10.Component Output",
+      "properties": {}
+    },
+    {
+      "id": 11,
+      "type": "ComponentOutput",
+      "pos": [
+        -1540,
+        -370
+      ],
+      "size": {
+        "0": 178,
+        "1": 26
+      },
+      "flags": {},
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "link": 10,
+          "label": "BAKED_VAE_A"
+        }
+      ],
+      "title": "04.Component Output",
+      "properties": {}
+    }
+  ],
+  "links": [
+    [
+      6,
+      10,
+      0,
+      1,
+      0,
+      "animerge_v21.safetensors,aniverse_thxEd14Pruned.safetensors,darkSushi25D25D_v40.safetensors,helloyoung2d_V10h.safetensors,meinapastel_v6Pastel.safetensors,plumpbreastsmix_v11.safetensors"
+    ],
+    [
+      7,
+      2,
+      0,
+      3,
+      0,
+      "*"
+    ],
+    [
+      10,
+      1,
+      2,
+      11,
+      0,
+      "VAE"
+    ],
+    [
+      14,
+      6,
+      0,
+      2,
+      1,
+      "FLOAT"
+    ],
+    [
+      15,
+      7,
+      0,
+      2,
+      2,
+      "FLOAT"
+    ],
+    [
+      16,
+      8,
+      0,
+      2,
+      3,
+      "FLOAT"
+    ],
+    [
+      17,
+      9,
+      0,
+      2,
+      4,
+      "FLOAT"
+    ],
+    [
+      18,
+      16,
+      0,
+      14,
+      0,
+      "4x-AnimeSharp.pth,4x-UltraSharp.pth,4x_NMKD-Siax_200k.pth,4x_NMKD-Superscale-SP_178000_G.pth,RealESRGAN_x4plus_anime_6B.pth,realesr-general-x4v3.pth"
+    ],
+    [
+      19,
+      14,
+      0,
+      17,
+      0,
+      "*"
+    ],
+    [
+      20,
+      20,
+      0,
+      18,
+      0,
+      "kl-f8-anime2.ckpt,orangemix.vae.pt,vae-ft-mse-840000-ema-pruned.safetensors"
+    ],
+    [
+      21,
+      18,
+      0,
+      21,
+      0,
+      "*"
+    ],
+    [
+      23,
+      22,
+      0,
+      5,
+      0,
+      "CLIP"
+    ],
+    [
+      25,
+      25,
+      0,
+      22,
+      1,
+      "INT"
+    ],
+    [
+      29,
+      34,
+      0,
+      31,
+      2,
+      "FLOAT"
+    ],
+    [
+      32,
+      34,
+      0,
+      33,
+      2,
+      "FLOAT"
+    ],
+    [
+      33,
+      35,
+      0,
+      34,
+      0,
+      "FLOAT"
+    ],
+    [
+      35,
+      1,
+      0,
+      31,
+      0,
+      "MODEL"
+    ],
+    [
+      36,
+      36,
+      0,
+      31,
+      1,
+      "MODEL"
+    ],
+    [
+      37,
+      31,
+      0,
+      2,
+      0,
+      "MODEL"
+    ],
+    [
+      38,
+      1,
+      1,
+      33,
+      0,
+      "CLIP"
+    ],
+    [
+      39,
+      36,
+      1,
+      33,
+      1,
+      "CLIP"
+    ],
+    [
+      40,
+      33,
+      0,
+      22,
+      0,
+      "CLIP"
+    ],
+    [
+      42,
+      38,
+      0,
+      36,
+      0,
+      "animerge_v21.safetensors,aniverse_thxEd14Pruned.safetensors,darkSushi25D25D_v40.safetensors,helloyoung2d_V10h.safetensors,meinapastel_v6Pastel.safetensors,plumpbreastsmix_v11.safetensors"
+    ],
+    [
+      44,
+      6,
+      0,
+      41,
+      1,
+      "FLOAT"
+    ],
+    [
+      45,
+      7,
+      0,
+      41,
+      2,
+      "FLOAT"
+    ],
+    [
+      46,
+      8,
+      0,
+      41,
+      3,
+      "FLOAT"
+    ],
+    [
+      47,
+      9,
+      0,
+      41,
+      4,
+      "FLOAT"
+    ],
+    [
+      49,
+      6,
+      0,
+      42,
+      1,
+      "FLOAT"
+    ],
+    [
+      50,
+      7,
+      0,
+      42,
+      2,
+      "FLOAT"
+    ],
+    [
+      51,
+      8,
+      0,
+      42,
+      3,
+      "FLOAT"
+    ],
+    [
+      52,
+      9,
+      0,
+      42,
+      4,
+      "FLOAT"
+    ],
+    [
+      53,
+      1,
+      0,
+      41,
+      0,
+      "MODEL"
+    ],
+    [
+      54,
+      41,
+      0,
+      4,
+      0,
+      "MODEL"
+    ],
+    [
+      55,
+      1,
+      0,
+      39,
+      0,
+      "*"
+    ],
+    [
+      57,
+      36,
+      0,
+      42,
+      0,
+      "MODEL"
+    ],
+    [
+      58,
+      42,
+      0,
+      43,
+      0,
+      "MODEL"
+    ],
+    [
+      59,
+      36,
+      0,
+      44,
+      0,
+      "MODEL"
+    ],
+    [
+      60,
+      36,
+      2,
+      45,
+      0,
+      "*"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {},
+  "version": 0.4,
+  "output": {
+    "1": {
+      "inputs": {
+        "ckpt_name": [
+          "10",
+          0
+        ]
+      },
+      "class_type": "CheckpointLoaderSimple"
+    },
+    "2": {
+      "inputs": {
+        "b1": [
+          "6",
+          0
+        ],
+        "b2": [
+          "7",
+          0
+        ],
+        "s1": [
+          "8",
+          0
+        ],
+        "s2": [
+          "9",
+          0
+        ],
+        "model": [
+          "31",
+          0
+        ]
+      },
+      "class_type": "FreeU"
+    },
+    "3": {
+      "inputs": {
+        "MODEL": [
+          "2",
+          0
+        ]
+      }
+    },
+    "4": {
+      "inputs": {
+        "MODEL": [
+          "41",
+          0
+        ]
+      }
+    },
+    "5": {
+      "inputs": {
+        "CLIP": [
+          "22",
+          0
+        ]
+      }
+    },
+    "6": {
+      "inputs": {}
+    },
+    "7": {
+      "inputs": {}
+    },
+    "8": {
+      "inputs": {}
+    },
+    "9": {
+      "inputs": {}
+    },
+    "10": {
+      "inputs": {}
+    },
+    "11": {
+      "inputs": {
+        "VAE": [
+          "1",
+          2
+        ]
+      }
+    },
+    "14": {
+      "inputs": {
+        "model_name": [
+          "16",
+          0
+        ]
+      },
+      "class_type": "UpscaleModelLoader"
+    },
+    "16": {
+      "inputs": {}
+    },
+    "17": {
+      "inputs": {
+        "UPSCALE_MODEL": [
+          "14",
+          0
+        ]
+      }
+    },
+    "18": {
+      "inputs": {
+        "vae_name": [
+          "20",
+          0
+        ]
+      },
+      "class_type": "VAELoader"
+    },
+    "20": {
+      "inputs": {}
+    },
+    "21": {
+      "inputs": {
+        "VAE": [
+          "18",
+          0
+        ]
+      }
+    },
+    "22": {
+      "inputs": {
+        "stop_at_clip_layer": [
+          "25",
+          0
+        ],
+        "clip": [
+          "33",
+          0
+        ]
+      },
+      "class_type": "CLIPSetLastLayer"
+    },
+    "25": {
+      "inputs": {}
+    },
+    "31": {
+      "inputs": {
+        "ratio": [
+          "34",
+          0
+        ],
+        "model1": [
+          "1",
+          0
+        ],
+        "model2": [
+          "36",
+          0
+        ]
+      },
+      "class_type": "ModelMergeSimple"
+    },
+    "33": {
+      "inputs": {
+        "ratio": [
+          "34",
+          0
+        ],
+        "clip1": [
+          "1",
+          1
+        ],
+        "clip2": [
+          "36",
+          1
+        ]
+      },
+      "class_type": "CLIPMergeSimple"
+    },
+    "34": {
+      "inputs": {
+        "Value": [
+          "35",
+          0
+        ]
+      },
+      "class_type": "Float"
+    },
+    "35": {
+      "inputs": {}
+    },
+    "36": {
+      "inputs": {
+        "ckpt_name": [
+          "38",
+          0
+        ]
+      },
+      "class_type": "CheckpointLoaderSimple"
+    },
+    "38": {
+      "inputs": {}
+    },
+    "39": {
+      "inputs": {
+        "MODEL": [
+          "1",
+          0
+        ]
+      }
+    },
+    "41": {
+      "inputs": {
+        "b1": [
+          "6",
+          0
+        ],
+        "b2": [
+          "7",
+          0
+        ],
+        "s1": [
+          "8",
+          0
+        ],
+        "s2": [
+          "9",
+          0
+        ],
+        "model": [
+          "1",
+          0
+        ]
+      },
+      "class_type": "FreeU"
+    },
+    "42": {
+      "inputs": {
+        "b1": [
+          "6",
+          0
+        ],
+        "b2": [
+          "7",
+          0
+        ],
+        "s1": [
+          "8",
+          0
+        ],
+        "s2": [
+          "9",
+          0
+        ],
+        "model": [
+          "36",
+          0
+        ]
+      },
+      "class_type": "FreeU"
+    },
+    "43": {
+      "inputs": {
+        "MODEL": [
+          "42",
+          0
+        ]
+      }
+    },
+    "44": {
+      "inputs": {
+        "MODEL": [
+          "36",
+          0
+        ]
+      }
+    },
+    "45": {
+      "inputs": {
+        "VAE": [
+          "36",
+          2
+        ]
+      }
+    }
+  }
+}
