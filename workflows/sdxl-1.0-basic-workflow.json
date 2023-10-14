@@ -1,183 +1,39 @@
 {
-  "last_node_id": 25,
-  "last_link_id": 40,
+  "last_node_id": 49,
+  "last_link_id": 103,
   "nodes": [
-    {
-      "id": 15,
-      "type": "EmptyLatentImage",
-      "pos": [
-        727.7626025968967,
-        462.24082535777904
-      ],
-      "size": {
-        "0": 315,
-        "1": 106
-      },
-      "flags": {
-        "collapsed": true
-      },
-      "order": 0,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [
-            18
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "EmptyLatentImage"
-      },
-      "widgets_values": [
-        1024,
-        1024,
-        1
-      ]
-    },
-    {
-      "id": 4,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        66.76260259689712,
-        303.240825357779
-      ],
-      "size": {
-        "0": 400.693359375,
-        "1": 98
-      },
-      "flags": {},
-      "order": 1,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            20
-          ],
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            12,
-            13
-          ],
-          "slot_index": 1
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            19
-          ],
-          "slot_index": 2
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CheckpointLoaderSimple"
-      },
-      "widgets_values": [
-        "sd_xl_base_1.0.safetensors"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 17,
-      "type": "CheckpointLoaderSimple",
-      "pos": [
-        58.76259782852554,
-        -552.3471154243371
-      ],
-      "size": {
-        "0": 400.693359375,
-        "1": 98
-      },
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": [
-            36
-          ],
-          "slot_index": 0
-        },
-        {
-          "name": "CLIP",
-          "type": "CLIP",
-          "links": [
-            26,
-            27
-          ],
-          "slot_index": 1
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [
-            35
-          ],
-          "slot_index": 2
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CheckpointLoaderSimple"
-      },
-      "widgets_values": [
-        "sd_xl_refiner_1.0.safetensors"
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
     {
       "id": 11,
       "type": "PrimitiveNode",
       "pos": [
-        68.76260259689712,
-        466.24082535777916
+        0,
+        -630
       ],
-      "size": {
-        "0": 392.1433410644531,
-        "1": 137.22702026367188
-      },
+      "size": [
+        310,
+        240
+      ],
       "flags": {},
-      "order": 3,
+      "order": 0,
       "mode": 0,
       "outputs": [
         {
           "name": "STRING",
           "type": "STRING",
           "links": [
-            10,
-            11,
-            24
+            86,
+            88
           ],
           "slot_index": 0,
           "widget": {
-            "name": "text_g",
-            "config": [
-              "STRING",
-              {
-                "multiline": true,
-                "default": "CLIP_G"
-              }
-            ]
+            "name": "pos_g"
           }
         }
       ],
       "title": "Positive Prompt",
       "properties": {},
       "widgets_values": [
-        "red transparent dice, poker chips, and cards shot in an angle, zoomed in, poker table background, green table surface"
+        "(cute dark brown maine coon cat in ezio_auditore_da_firenze outfit:1.2), bipedal, wearing assassin hood, dramatic lighting, (best composition:1.3), (dynamic pose, low angle:1.2), fluffy dark tail, (black stripes: 1.3), LOOKING AT VIEWER,\nhighly detailed, realistic, jumping at in Paris rooftop at night, (full moon:1.2),"
       ],
       "color": "#232",
       "bgcolor": "#353"
@@ -186,100 +42,289 @@
       "id": 13,
       "type": "PrimitiveNode",
       "pos": [
-        64.76260259689712,
-        677.2408253577789
+        10,
+        -340
       ],
-      "size": {
-        "0": 395.98333740234375,
-        "1": 80.42700958251953
-      },
+      "size": [
+        300,
+        100
+      ],
       "flags": {},
-      "order": 4,
+      "order": 1,
       "mode": 0,
       "outputs": [
         {
           "name": "STRING",
           "type": "STRING",
           "links": [
-            14,
-            15,
-            25
+            48,
+            49
           ],
           "slot_index": 0,
           "widget": {
-            "name": "text_g",
-            "config": [
-              "STRING",
-              {
-                "multiline": true,
-                "default": "CLIP_G"
-              }
-            ]
+            "name": "neg_g"
           }
         }
       ],
       "title": "Negative Prompt",
       "properties": {},
       "widgets_values": [
-        "watermark, username, hat, bunny, deformed, unrealistic dice"
+        "watermark, username, logo, cartoon,"
       ],
       "color": "#322",
       "bgcolor": "#533"
     },
     {
-      "id": 24,
-      "type": "PrimitiveNode",
+      "id": 39,
+      "type": "## 01_resolution_selector [2e51e4]",
       "pos": [
-        563.7626025968967,
-        686.240825357779
+        760,
+        -440
+      ],
+      "size": [
+        230,
+        120
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "WIDTH",
+          "type": "INT",
+          "links": [
+            75
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "HEIGHT",
+          "type": "INT",
+          "links": [
+            76
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "1/2 WIDTH",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "1/2 HEIGHT",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "## 01_resolution_selector",
+      "properties": {
+        "Node name for S&R": "## 01_resolution_selector [2e51e4]"
+      },
+      "widgets_values": [
+        "1152x896"
+      ]
+    },
+    {
+      "id": 47,
+      "type": "## 04_multi_loader [7ac924]",
+      "pos": [
+        350,
+        -510
       ],
       "size": {
-        "0": 210,
-        "1": 82
+        "0": 315,
+        "1": 326
       },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FREEU_MODEL",
+          "type": "MODEL",
+          "links": [
+            90
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            92,
+            94
+          ],
+          "shape": 3,
+          "slot_index": 2
+        },
+        {
+          "name": "BAKED_VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "## 04_multi_loader",
+      "properties": {
+        "Node name for S&R": "## 04_multi_loader [7ac924]"
+      },
+      "widgets_values": [
+        "sdXL_v10VAEFix.safetensors",
+        "kl-f8-anime2.ckpt",
+        "4x-UltraSharp.pth",
+        1.4000000000000001,
+        1,
+        1.3,
+        0.5,
+        -2
+      ]
+    },
+    {
+      "id": 48,
+      "type": "## 04_multi_loader [7ac924]",
+      "pos": [
+        350,
+        -130
+      ],
+      "size": {
+        "0": 315,
+        "1": 326
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "outputs": [
+        {
+          "name": "FREEU_MODEL",
+          "type": "MODEL",
+          "links": [
+            91
+          ],
+          "shape": 3,
+          "slot_index": 0
+        },
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            93,
+            95
+          ],
+          "shape": 3,
+          "slot_index": 2
+        },
+        {
+          "name": "BAKED_VAE",
+          "type": "VAE",
+          "links": [
+            101
+          ],
+          "shape": 3,
+          "slot_index": 3
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "UPSCALE_MODEL",
+          "type": "UPSCALE_MODEL",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "## 04_multi_loader",
+      "properties": {
+        "Node name for S&R": "## 04_multi_loader [7ac924]"
+      },
+      "widgets_values": [
+        "sdXL_v10RefinerVAEFix.safetensors",
+        "kl-f8-anime2.ckpt",
+        "4x-UltraSharp.pth",
+        1.4000000000000001,
+        1,
+        1.3,
+        0.5,
+        -2
+      ]
+    },
+    {
+      "id": 41,
+      "type": "Seed (rgthree)",
+      "pos": [
+        760,
+        -630
+      ],
+      "size": [
+        230,
+        140
+      ],
       "flags": {},
       "order": 5,
       "mode": 0,
       "outputs": [
         {
-          "name": "INT",
+          "name": "SEED",
           "type": "INT",
           "links": [
-            39,
-            40
+            102
           ],
-          "slot_index": 0,
-          "widget": {
-            "name": "noise_seed",
-            "config": [
-              "INT",
-              {
-                "default": 0,
-                "min": 0,
-                "max": 18446744073709552000
-              }
-            ]
-          }
+          "shape": 3,
+          "slot_index": 0
         }
       ],
-      "title": "Noise Seed",
-      "properties": {},
+      "properties": {
+        "Node name for S&R": "Seed (rgthree)"
+      },
       "widgets_values": [
-        12312312,
-        "fixed"
+        982423849283157,
+        null,
+        null,
+        null
       ]
     },
     {
-      "id": 10,
-      "type": "CLIPTextEncodeSDXL",
+      "id": 40,
+      "type": "## 02_ppf_latent [5dfecc]",
       "pos": [
-        742.7626025968967,
-        242.2408253577788
+        1050,
+        -430
       ],
-      "size": {
-        "0": 400,
-        "1": 270
-      },
+      "size": [
+        320,
+        310
+      ],
       "flags": {
         "collapsed": true
       },
@@ -287,139 +332,227 @@
       "mode": 0,
       "inputs": [
         {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 12
+          "name": "optional_vae",
+          "type": "VAE",
+          "link": null
         },
         {
-          "name": "text_g",
-          "type": "STRING",
-          "link": 10,
+          "name": "width",
+          "type": "INT",
+          "link": 75,
           "widget": {
-            "name": "text_g",
-            "config": [
-              "STRING",
-              {
-                "multiline": true,
-                "default": "CLIP_G"
-              }
-            ]
+            "name": "width"
           }
         },
         {
-          "name": "text_l",
-          "type": "STRING",
-          "link": 11,
+          "name": "height",
+          "type": "INT",
+          "link": 76,
           "widget": {
-            "name": "text_l",
-            "config": [
-              "STRING",
-              {
-                "multiline": true,
-                "default": "CLIP_L"
-              }
-            ]
+            "name": "height"
           }
         }
       ],
       "outputs": [
         {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
+          "name": "LATENT",
+          "type": "LATENT",
           "links": [
-            16
+            100
           ],
           "shape": 3,
           "slot_index": 0
+        },
+        {
+          "name": "WIDTH",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "HEIGHT",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "1/3 WIDTH",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "X OFFSET (R)",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "1/3 HEIGHT",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "1/2 WIDTH",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "Y OFFSET (B)",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "1/2 HEIGHT",
+          "type": "INT",
+          "links": null,
+          "shape": 3
         }
       ],
+      "title": "## 02_ppf_latent",
       "properties": {
-        "Node name for S&R": "CLIPTextEncodeSDXL"
+        "Node name for S&R": "## 02_ppf_latent [5dfecc]"
       },
       "widgets_values": [
-        1024,
-        1024,
-        0,
-        0,
-        1024,
-        1024,
-        "red transparent dice, poker chips, and cards shot in an angle, zoomed in, poker table background, green table surface",
-        "red transparent dice, poker chips, and cards shot in an angle, zoomed in, poker table background, green table surface"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
+        512,
+        512,
+        1,
+        277793378093273,
+        "fixed"
+      ]
     },
     {
-      "id": 19,
-      "type": "CLIPTextEncodeSDXLRefiner",
+      "id": 27,
+      "type": "SeargeSDXLPromptEncoder",
       "pos": [
-        630.7625978285256,
-        -502.3471154243371
+        760,
+        -270
       ],
       "size": {
-        "0": 400,
-        "1": 200
+        "0": 245.1999969482422,
+        "1": 466
       },
-      "flags": {
-        "collapsed": true
-      },
+      "flags": {},
       "order": 7,
       "mode": 0,
       "inputs": [
         {
-          "name": "clip",
+          "name": "base_clip",
           "type": "CLIP",
-          "link": 27
+          "link": 94
         },
         {
-          "name": "text",
+          "name": "refiner_clip",
+          "type": "CLIP",
+          "link": 95
+        },
+        {
+          "name": "pos_g",
           "type": "STRING",
-          "link": 24,
+          "link": 86,
           "widget": {
-            "name": "text",
-            "config": [
-              "STRING",
-              {
-                "multiline": true
-              }
-            ]
+            "name": "pos_g"
+          }
+        },
+        {
+          "name": "pos_l",
+          "type": "STRING",
+          "link": 88,
+          "widget": {
+            "name": "pos_l"
+          }
+        },
+        {
+          "name": "neg_g",
+          "type": "STRING",
+          "link": 48,
+          "widget": {
+            "name": "neg_g"
+          }
+        },
+        {
+          "name": "neg_l",
+          "type": "STRING",
+          "link": 49,
+          "widget": {
+            "name": "neg_l"
           }
         }
       ],
       "outputs": [
         {
-          "name": "CONDITIONING",
+          "name": "base_positive",
           "type": "CONDITIONING",
           "links": [
-            28
+            96
           ],
           "shape": 3,
           "slot_index": 0
+        },
+        {
+          "name": "base_negative",
+          "type": "CONDITIONING",
+          "links": [
+            97
+          ],
+          "shape": 3,
+          "slot_index": 1
+        },
+        {
+          "name": "refiner_positive",
+          "type": "CONDITIONING",
+          "links": [
+            98
+          ],
+          "shape": 3,
+          "slot_index": 2
+        },
+        {
+          "name": "refiner_negative",
+          "type": "CONDITIONING",
+          "links": [
+            99
+          ],
+          "shape": 3,
+          "slot_index": 3
         }
       ],
       "properties": {
-        "Node name for S&R": "CLIPTextEncodeSDXLRefiner"
+        "Node name for S&R": "SeargeSDXLPromptEncoder"
       },
       "widgets_values": [
+        "(cute dark brown maine coon cat in ezio_auditore_da_firenze outfit:1.2), bipedal, wearing assassin hood, dramatic lighting, (best composition:1.3), (dynamic pose, low angle:1.2), fluffy dark tail, (black stripes: 1.3), LOOKING AT VIEWER,\nhighly detailed, realistic, jumping at in Paris rooftop at night, (full moon:1.2),",
+        "(cute dark brown maine coon cat in ezio_auditore_da_firenze outfit:1.2), bipedal, wearing assassin hood, dramatic lighting, (best composition:1.3), (dynamic pose, low angle:1.2), fluffy dark tail, (black stripes: 1.3), LOOKING AT VIEWER,\nhighly detailed, realistic, jumping at in Paris rooftop at night, (full moon:1.2),",
+        "",
+        "watermark, username, logo, cartoon,",
+        "watermark, username, logo, cartoon,",
+        "",
+        4096,
+        4096,
+        0,
+        0,
+        4096,
+        4096,
         6,
-        1024,
-        1024,
-        "red transparent dice, poker chips, and cards shot in an angle, zoomed in, poker table background, green table surface"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
+        2.5,
+        2048,
+        2048
+      ]
     },
     {
-      "id": 12,
-      "type": "CLIPTextEncodeSDXL",
+      "id": 46,
+      "type": "Pack SDXL Tuple",
       "pos": [
-        742.7626025968967,
-        282.24082535777893
+        1050,
+        -350
       ],
-      "size": {
-        "0": 400,
-        "1": 270
-      },
+      "size": [
+        230,
+        170
+      ],
       "flags": {
         "collapsed": true
       },
@@ -427,167 +560,91 @@
       "mode": 0,
       "inputs": [
         {
-          "name": "clip",
+          "name": "base_model",
+          "type": "MODEL",
+          "link": 90
+        },
+        {
+          "name": "base_clip",
           "type": "CLIP",
-          "link": 13
+          "link": 92
         },
         {
-          "name": "text_g",
-          "type": "STRING",
-          "link": 14,
-          "widget": {
-            "name": "text_g",
-            "config": [
-              "STRING",
-              {
-                "multiline": true,
-                "default": "CLIP_G"
-              }
-            ]
-          }
+          "name": "base_positive",
+          "type": "CONDITIONING",
+          "link": 96
         },
         {
-          "name": "text_l",
-          "type": "STRING",
-          "link": 15,
-          "widget": {
-            "name": "text_l",
-            "config": [
-              "STRING",
-              {
-                "multiline": true,
-                "default": "CLIP_L"
-              }
-            ]
-          }
+          "name": "base_negative",
+          "type": "CONDITIONING",
+          "link": 97
+        },
+        {
+          "name": "refiner_model",
+          "type": "MODEL",
+          "link": 91
+        },
+        {
+          "name": "refiner_clip",
+          "type": "CLIP",
+          "link": 93
+        },
+        {
+          "name": "refiner_positive",
+          "type": "CONDITIONING",
+          "link": 98
+        },
+        {
+          "name": "refiner_negative",
+          "type": "CONDITIONING",
+          "link": 99
         }
       ],
       "outputs": [
         {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
+          "name": "SDXL_TUPLE",
+          "type": "SDXL_TUPLE",
           "links": [
-            17
+            89
           ],
           "shape": 3,
           "slot_index": 0
         }
       ],
       "properties": {
-        "Node name for S&R": "CLIPTextEncodeSDXL"
+        "Node name for S&R": "Pack SDXL Tuple"
       },
-      "widgets_values": [
-        1024,
-        1024,
-        0,
-        0,
-        1024,
-        1024,
-        "watermark, username, hat, bunny, deformed, unrealistic dice",
-        "watermark, username, hat, bunny, deformed, unrealistic dice"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
+      "shape": 1
     },
     {
-      "id": 20,
-      "type": "CLIPTextEncodeSDXLRefiner",
+      "id": 45,
+      "type": "KSampler SDXL (Eff.)",
       "pos": [
-        636.7625978285256,
-        -431.34711542433695
+        1230,
+        -380
       ],
-      "size": {
-        "0": 400,
-        "1": 200
-      },
-      "flags": {
-        "collapsed": true
-      },
+      "size": [
+        330,
+        570
+      ],
+      "flags": {},
       "order": 9,
       "mode": 0,
       "inputs": [
         {
-          "name": "clip",
-          "type": "CLIP",
-          "link": 26
-        },
-        {
-          "name": "text",
-          "type": "STRING",
-          "link": 25,
-          "widget": {
-            "name": "text",
-            "config": [
-              "STRING",
-              {
-                "multiline": true
-              }
-            ]
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "CONDITIONING",
-          "type": "CONDITIONING",
-          "links": [
-            29
-          ],
-          "shape": 3,
-          "slot_index": 0
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "CLIPTextEncodeSDXLRefiner"
-      },
-      "widgets_values": [
-        2.5,
-        1024,
-        1024,
-        "watermark, username, hat, bunny, deformed, unrealistic dice"
-      ],
-      "color": "#322",
-      "bgcolor": "#533"
-    },
-    {
-      "id": 14,
-      "type": "KSampler Adv. (Efficient)",
-      "pos": [
-        974.7626025968976,
-        210.24082535777873
-      ],
-      "size": {
-        "0": 330,
-        "1": 658
-      },
-      "flags": {},
-      "order": 10,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 20
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 16
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 17
+          "name": "sdxl_tuple",
+          "type": "SDXL_TUPLE",
+          "link": 89
         },
         {
           "name": "latent_image",
           "type": "LATENT",
-          "link": 18
+          "link": 100
         },
         {
           "name": "optional_vae",
           "type": "VAE",
-          "link": 19
+          "link": 101
         },
         {
           "name": "script",
@@ -597,483 +654,234 @@
         {
           "name": "noise_seed",
           "type": "INT",
-          "link": 39,
+          "link": 102,
           "widget": {
-            "name": "noise_seed",
-            "config": [
-              "INT",
-              {
-                "default": 0,
-                "min": 0,
-                "max": 18446744073709552000
-              }
-            ]
+            "name": "noise_seed"
           }
         }
       ],
       "outputs": [
         {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": null,
-          "shape": 3
-        },
-        {
-          "name": "CONDITIONING+",
-          "type": "CONDITIONING",
-          "links": null,
-          "shape": 3
-        },
-        {
-          "name": "CONDITIONING-",
-          "type": "CONDITIONING",
+          "name": "SDXL_TUPLE",
+          "type": "SDXL_TUPLE",
           "links": null,
           "shape": 3
         },
         {
           "name": "LATENT",
           "type": "LATENT",
-          "links": [
-            34
-          ],
-          "shape": 3,
-          "slot_index": 3
+          "links": null,
+          "shape": 3
         },
         {
           "name": "VAE",
           "type": "VAE",
-          "links": [],
-          "shape": 3,
-          "slot_index": 4
+          "links": null,
+          "shape": 3
         },
         {
           "name": "IMAGE",
           "type": "IMAGE",
-          "links": [
-            38
-          ],
+          "links": [],
           "shape": 3,
-          "slot_index": 5
+          "slot_index": 3
         }
       ],
       "properties": {
-        "Node name for S&R": "KSampler Adv. (Efficient)"
+        "Node name for S&R": "KSampler SDXL (Eff.)"
       },
       "widgets_values": [
         "Sample",
-        "enable",
-        12312312,
-        "fixed",
-        12,
+        -1,
+        null,
+        30,
         7,
-        "dpmpp_3m_sde_gpu",
-        "karras",
+        "euler",
+        "normal",
         0,
-        10000,
-        "enable",
-        "auto",
-        "true"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 21,
-      "type": "KSampler Adv. (Efficient)",
-      "pos": [
-        978.7625978285256,
-        -562.3471154243371
-      ],
-      "size": {
-        "0": 330,
-        "1": 658
-      },
-      "flags": {},
-      "order": 11,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "model",
-          "type": "MODEL",
-          "link": 36
-        },
-        {
-          "name": "positive",
-          "type": "CONDITIONING",
-          "link": 28
-        },
-        {
-          "name": "negative",
-          "type": "CONDITIONING",
-          "link": 29
-        },
-        {
-          "name": "latent_image",
-          "type": "LATENT",
-          "link": 34
-        },
-        {
-          "name": "optional_vae",
-          "type": "VAE",
-          "link": 35
-        },
-        {
-          "name": "script",
-          "type": "SCRIPT",
-          "link": null
-        },
-        {
-          "name": "noise_seed",
-          "type": "INT",
-          "link": 40,
-          "widget": {
-            "name": "noise_seed",
-            "config": [
-              "INT",
-              {
-                "default": 0,
-                "min": 0,
-                "max": 18446744073709552000
-              }
-            ]
-          }
-        }
-      ],
-      "outputs": [
-        {
-          "name": "MODEL",
-          "type": "MODEL",
-          "links": null,
-          "shape": 3
-        },
-        {
-          "name": "CONDITIONING+",
-          "type": "CONDITIONING",
-          "links": null,
-          "shape": 3
-        },
-        {
-          "name": "CONDITIONING-",
-          "type": "CONDITIONING",
-          "links": null,
-          "shape": 3
-        },
-        {
-          "name": "LATENT",
-          "type": "LATENT",
-          "links": [],
-          "shape": 3,
-          "slot_index": 3
-        },
-        {
-          "name": "VAE",
-          "type": "VAE",
-          "links": [],
-          "shape": 3,
-          "slot_index": 4
-        },
-        {
-          "name": "IMAGE",
-          "type": "IMAGE",
-          "links": [
-            33
-          ],
-          "shape": 3,
-          "slot_index": 5
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "KSampler Adv. (Efficient)"
-      },
-      "widgets_values": [
-        "Sample",
-        "enable",
-        12312312,
-        "fixed",
         20,
-        7,
-        "dpmpp_3m_sde_gpu",
-        "karras",
-        12,
-        10000,
-        "disable",
         "auto",
         "true"
       ],
-      "color": "#323",
-      "bgcolor": "#535"
-    },
-    {
-      "id": 23,
-      "type": "SaveImage",
-      "pos": [
-        1345.762602596898,
-        213.24082535777873
-      ],
-      "size": {
-        "0": 609.7125244140625,
-        "1": 654.9508666992188
-      },
-      "flags": {},
-      "order": 12,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 38
-        }
-      ],
-      "properties": {},
-      "widgets_values": [
-        "Base_Poker"
-      ],
-      "color": "#223",
-      "bgcolor": "#335"
-    },
-    {
-      "id": 18,
-      "type": "SaveImage",
-      "pos": [
-        1347.7625978285253,
-        -551.3471154243371
-      ],
-      "size": {
-        "0": 598.661865234375,
-        "1": 644.5293579101562
-      },
-      "flags": {},
-      "order": 13,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 33
-        }
-      ],
-      "properties": {},
-      "widgets_values": [
-        "Refiner_Poker"
-      ],
-      "color": "#323",
-      "bgcolor": "#535"
+      "color": "#223322",
+      "bgcolor": "#335533",
+      "shape": 1
     }
   ],
   "links": [
     [
-      10,
-      11,
-      0,
-      10,
-      1,
-      "STRING"
-    ],
-    [
-      11,
-      11,
-      0,
-      10,
-      2,
-      "STRING"
-    ],
-    [
-      12,
-      4,
-      1,
-      10,
-      0,
-      "CLIP"
-    ],
-    [
-      13,
-      4,
-      1,
-      12,
-      0,
-      "CLIP"
-    ],
-    [
-      14,
+      48,
       13,
       0,
-      12,
-      1,
-      "STRING"
-    ],
-    [
-      15,
-      13,
-      0,
-      12,
-      2,
-      "STRING"
-    ],
-    [
-      16,
-      10,
-      0,
-      14,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      17,
-      12,
-      0,
-      14,
-      2,
-      "CONDITIONING"
-    ],
-    [
-      18,
-      15,
-      0,
-      14,
-      3,
-      "LATENT"
-    ],
-    [
-      19,
-      4,
-      2,
-      14,
-      4,
-      "VAE"
-    ],
-    [
-      20,
-      4,
-      0,
-      14,
-      0,
-      "MODEL"
-    ],
-    [
-      24,
-      11,
-      0,
-      19,
-      1,
-      "STRING"
-    ],
-    [
-      25,
-      13,
-      0,
-      20,
-      1,
-      "STRING"
-    ],
-    [
-      26,
-      17,
-      1,
-      20,
-      0,
-      "CLIP"
-    ],
-    [
       27,
-      17,
-      1,
-      19,
-      0,
-      "CLIP"
-    ],
-    [
-      28,
-      19,
-      0,
-      21,
-      1,
-      "CONDITIONING"
-    ],
-    [
-      29,
-      20,
-      0,
-      21,
-      2,
-      "CONDITIONING"
-    ],
-    [
-      33,
-      21,
-      5,
-      18,
-      0,
-      "IMAGE"
-    ],
-    [
-      34,
-      14,
-      3,
-      21,
-      3,
-      "LATENT"
-    ],
-    [
-      35,
-      17,
-      2,
-      21,
       4,
-      "VAE"
+      "STRING"
     ],
     [
-      36,
-      17,
+      49,
+      13,
       0,
-      21,
-      0,
-      "MODEL"
-    ],
-    [
-      38,
-      14,
+      27,
       5,
-      23,
-      0,
-      "IMAGE"
+      "STRING"
     ],
     [
+      75,
       39,
-      24,
       0,
-      14,
-      6,
+      40,
+      1,
       "INT"
     ],
     [
+      76,
+      39,
+      1,
       40,
-      24,
+      2,
+      "INT"
+    ],
+    [
+      86,
+      11,
       0,
-      21,
+      27,
+      2,
+      "STRING"
+    ],
+    [
+      88,
+      11,
+      0,
+      27,
+      3,
+      "STRING"
+    ],
+    [
+      89,
+      46,
+      0,
+      45,
+      0,
+      "SDXL_TUPLE"
+    ],
+    [
+      90,
+      47,
+      0,
+      46,
+      0,
+      "MODEL"
+    ],
+    [
+      91,
+      48,
+      0,
+      46,
+      4,
+      "MODEL"
+    ],
+    [
+      92,
+      47,
+      2,
+      46,
+      1,
+      "CLIP"
+    ],
+    [
+      93,
+      48,
+      2,
+      46,
+      5,
+      "CLIP"
+    ],
+    [
+      94,
+      47,
+      2,
+      27,
+      0,
+      "CLIP"
+    ],
+    [
+      95,
+      48,
+      2,
+      27,
+      1,
+      "CLIP"
+    ],
+    [
+      96,
+      27,
+      0,
+      46,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      97,
+      27,
+      1,
+      46,
+      3,
+      "CONDITIONING"
+    ],
+    [
+      98,
+      27,
+      2,
+      46,
       6,
+      "CONDITIONING"
+    ],
+    [
+      99,
+      27,
+      3,
+      46,
+      7,
+      "CONDITIONING"
+    ],
+    [
+      100,
+      40,
+      0,
+      45,
+      1,
+      "LATENT"
+    ],
+    [
+      101,
+      48,
+      3,
+      45,
+      2,
+      "VAE"
+    ],
+    [
+      102,
+      41,
+      0,
+      45,
+      4,
       "INT"
     ]
   ],
   "groups": [
     {
-      "title": "Refiner",
+      "title": "SDXL",
       "bounding": [
-        9,
-        -671,
-        1983,
-        793
+        -34,
+        -724,
+        1640,
+        957
       ],
-      "color": "#a1309b"
-    },
-    {
-      "title": "Base",
-      "bounding": [
-        10,
-        145,
-        1980,
-        767
-      ],
-      "color": "#3f789e"
+      "color": "#3f789e",
+      "font_size": 24,
+      "locked": false
     }
   ],
   "config": {},
